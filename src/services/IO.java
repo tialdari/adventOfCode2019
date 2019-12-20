@@ -6,7 +6,24 @@ import java.util.List;
 
 public class IO {
 
-    public BufferedReader getFileContent(File file){
+    private File file;
+
+    public IO() {
+    }
+
+    public IO(File file) {
+        this.file = file;
+    }
+
+    public File getFile() {
+        return file;
+    }
+
+    public void setFile(File file) {
+        this.file = file;
+    }
+
+    public BufferedReader getFileContent(){
 
         FileReader fileReader = null;
         try {
@@ -16,24 +33,5 @@ public class IO {
         }
 
         return new BufferedReader(fileReader);
-
-    }
-
-    public List<String> processFileText(BufferedReader bufferedReader){
-
-        ArrayList<String> result = new ArrayList<String>();
-        String line = "";
-
-        while(true){
-            try {
-                if (!((line = bufferedReader.readLine()) != null)) break;
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            result.add(line);
-            System.out.println(line);
-        }
-
-        return result;
     }
 }
