@@ -1,22 +1,12 @@
 package services;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class IO {
 
     private File file;
 
     public IO() {
-    }
-
-    public IO(File file) {
-        this.file = file;
-    }
-
-    public File getFile() {
-        return file;
     }
 
     public void setFile(File file) {

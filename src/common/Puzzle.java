@@ -19,11 +19,6 @@ public abstract class Puzzle {
         io = new IO();
     }
 
-    public Puzzle(IO io, File file) {
-        this.io = io;
-        this.file = file;
-    }
-
     public void initialize(){
 
         if(file == null) file = new File(FULL_INPUTS_PATH_PREFIX + "day_1_input.txt");
@@ -45,7 +40,6 @@ public abstract class Puzzle {
                 e.printStackTrace();
             }
             result.add(line);
-            System.out.println(line);
         }
 
         return result;
