@@ -13,7 +13,6 @@ import static resources.values.Values.*;
 public abstract class Puzzle {
 
     protected IO io;
-    protected File file;
 
     public Puzzle() {
         io = new IO();
@@ -21,8 +20,7 @@ public abstract class Puzzle {
 
     public void initialize(){
 
-        if(file == null) file = new File(FULL_INPUTS_PATH_PREFIX + "day_1_input.txt");
-        io.setFile(file);
+        io.setFile(new File(FULL_INPUTS_PATH_PREFIX + "day_1_input.txt"));
     }
 
     public abstract int computeResult();

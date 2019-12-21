@@ -7,9 +7,8 @@ public class Main {
 
         Puzzle day1puzzle = new Day1Puzzle();
         day1puzzle.initialize();
-        //System.out.println("Result:" + day1puzzle.computeResult());
-
-        System.out.println("Result:" + ((Day1Puzzle) day1puzzle).computeOneLineResult(12));
+        System.out.println("Result:" + day1puzzle.computeResult());
+        //System.out.println("Result:" + ((Day1Puzzle) day1puzzle).computeOneLineResult(12));
 
     }
 }
