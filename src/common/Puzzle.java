@@ -25,7 +25,7 @@ public abstract class Puzzle {
 
     public abstract int computeResult();
 
-    public List<String> processText(){
+    public List<String> toArrayList(){
 
         BufferedReader bufferedReader = io.getFileContent();
         ArrayList<String> result = new ArrayList<>();
