@@ -11,6 +11,9 @@ public class Day2Puzzle extends Puzzle {
     public static final int POS_1_REPLACE_NUM = 12;
     public static final int POS_2_REPLACE_NUM = 2;
 
+    public static final int NOUN_RANGE = 99;
+    public static final int VERB_RANGE = 99;
+
     public Day2Puzzle() {
         super();
     }
@@ -20,29 +23,55 @@ public class Day2Puzzle extends Puzzle {
 
         int[] intcode = convertToIntArray(getFileContentAsString().split(","));
 
-        intcode[1] = POS_1_REPLACE_NUM;
-        intcode[2] = POS_2_REPLACE_NUM;
+        int[] resultPair = computeInputPair(intcode, 19690720);
+        int result = 100 * resultPair[0] + resultPair[1];
+
+        return result;
+
+    }
+
+    private int[] replaceNumbers(int[] intcode, int pos1ReplaceNum, int pos2ReplaceNum){
+
+        intcode[1] = pos1ReplaceNum;
+        intcode[2] = pos2ReplaceNum;
+        return intcode;
+    }
+
+    private int[] computeInputPair(int[] intcode, int givenResult){
+
+        int[] intcodeCopy;
+
+        for(int i = 0; i <= NOUN_RANGE; i++){
+            for(int j = 0; j <= VERB_RANGE; j++){
+                intcodeCopy = replaceNumbers(intcode.clone(), i, j);
+                if(getProgramResult(intcodeCopy) == givenResult) return new int[]{i, j};
+            }
+        }
+        return new int[]{0,0};
+    }
+
+    private int getProgramResult(int[] intcode){
+
         int resultPos;
         int firstNumPos;
         int secondNumPos;
 
         for (int i = 0; i < intcode.length; i++) {
 
+            resultPos = intcode[i + 3];
+            firstNumPos = intcode[i + 1];
+            secondNumPos = intcode[i + 2];
+
             switch (intcode[i]) {
 
                 case OPCODE_ADD_NUM:
-                    resultPos = intcode[i + 3];
-                    firstNumPos = intcode[i + 1];
-                    secondNumPos = intcode[i + 2];
+
                     intcode[resultPos] = intcode[firstNumPos] + intcode[secondNumPos];
                     if(i + 4 < intcode.length) i += 3;
 
                     break;
 
                 case OPCODE_MULT_NUM:
-                    resultPos = intcode[i + 3];
-                    firstNumPos = intcode[i + 1];
-                    secondNumPos = intcode[i + 2];
                     intcode[resultPos] = intcode[firstNumPos] * intcode[secondNumPos];
                     if(i + 4 <= intcode.length) i += 3;
 
@@ -54,6 +83,7 @@ public class Day2Puzzle extends Puzzle {
         }
         return intcode[0];
     }
+
 
     private int[] convertToIntArray(String[] inputArray){
 
