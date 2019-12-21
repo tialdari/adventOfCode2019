@@ -6,7 +6,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import static resources.values.Values.*;
@@ -25,6 +24,31 @@ public abstract class Puzzle {
     }
 
     public abstract int computeResult();
+
+//    public List<String> toArray(){
+//
+//        BufferedReader csvReader = io.getFileContent();
+//        List<String> newList = new ArrayList<>();
+//
+//        String row = "";
+//
+//        while (true) {
+//            try {
+//                if (!((row = csvReader.readLine()) != null)) break;
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//            String[] data = row.split(",");
+//            Collections.addAll(newList, data);
+//        }
+//        try {
+//            csvReader.close();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//
+//        return newList;
+//    }
 
     public List<String> toArrayList(){
 
@@ -50,28 +74,29 @@ public abstract class Puzzle {
         return result;
     }
 
-    public List<String> toArray(){
+    public String getFileContentAsString(){
 
-        BufferedReader csvReader = io.getFileContent();
-        List<String> newList = new ArrayList<>();
+        BufferedReader bufferedReader = io.getFileContent();
+        String result = "";
+        String line = "";
 
-        String row = "";
-
-        while (true) {
+        while(true){
             try {
-                if (!((row = csvReader.readLine()) != null)) break;
+                if (!((line = bufferedReader.readLine()) != null)) break;
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            String[] data = row.split(",");
-            Collections.addAll(newList, data);
+            result += line;
         }
+
         try {
-            csvReader.close();
+            bufferedReader.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        return newList;
+        return result;
     }
+
+
 }

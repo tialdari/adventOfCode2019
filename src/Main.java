@@ -12,6 +12,6 @@ public class Main {
 
         Puzzle day2Puzzle = new Day2Puzzle();
         day2Puzzle.initialize("day_2_input.txt");
-        day2Puzzle.computeResult();
+        System.out.println("Result:" + day2Puzzle.computeResult());
     }
 }
