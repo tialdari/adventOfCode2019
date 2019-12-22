@@ -25,31 +25,6 @@ public abstract class Puzzle {
 
     public abstract int computeResult();
 
-//    public List<String> toArray(){
-//
-//        BufferedReader csvReader = io.getFileContent();
-//        List<String> newList = new ArrayList<>();
-//
-//        String row = "";
-//
-//        while (true) {
-//            try {
-//                if (!((row = csvReader.readLine()) != null)) break;
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//            String[] data = row.split(",");
-//            Collections.addAll(newList, data);
-//        }
-//        try {
-//            csvReader.close();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//        return newList;
-//    }
-
     public List<String> toArrayList(){
 
         BufferedReader bufferedReader = io.getFileContent();
@@ -86,7 +61,7 @@ public abstract class Puzzle {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            result += line;
+            result += " " + line;
         }
 
         try {
@@ -98,5 +73,14 @@ public abstract class Puzzle {
         return result;
     }
 
+    public int[] convertToIntArray(String[] inputArray){
 
+        int[] resultArray = new int[inputArray.length];
+
+        for(int i = 0; i < inputArray.length; i++){
+            resultArray[i] = Integer.parseInt(inputArray[i].trim());
+        }
+
+        return resultArray;
+    }
 }

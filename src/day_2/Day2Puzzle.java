@@ -83,16 +83,4 @@ public class Day2Puzzle extends Puzzle {
         }
         return intcode[0];
     }
-
-
-    private int[] convertToIntArray(String[] inputArray){
-
-        int[] resultArray = new int[inputArray.length];
-
-        for(int i = 0; i < inputArray.length; i++){
-            resultArray[i] = Integer.parseInt(inputArray[i].trim());
-        }
-
-        return resultArray;
-    }
 }
