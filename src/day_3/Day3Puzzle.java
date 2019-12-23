@@ -52,17 +52,18 @@ public class Day3Puzzle extends Puzzle {
         int stepValue = Integer.parseInt(inputInstructions.get(0).substring(1));
         nextStep = new Step(departurePoint, direction, stepValue);
         nextStep.computeDestinationPoint();
+        stepsList.add(nextStep);
 
         for(int i = 1; i < inputInstructions.size(); i++){
 
             direction = String.valueOf(inputInstructions.get(i).charAt(0));
             stepValue = Integer.parseInt(inputInstructions.get(i).substring(1));
 
-            nextStep = new Step(departurePoint, direction, stepValue);
+            nextStep = new Step(new Point(stepsList.get(i - 1).getDestinationPoint().getX(),
+                    stepsList.get(i - 1).getDestinationPoint().getY(),
+                    stepsList.get(i - 1).getDestinationPoint().getManhattanValue()), direction, stepValue);
             nextStep.computeDestinationPoint();
             stepsList.add(nextStep);
-
-            departurePoint = stepsList.get(i - 1).getDestinationPoint();
         }
 
         return stepsList;

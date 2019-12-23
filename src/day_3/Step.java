@@ -12,7 +12,7 @@ public class Step {
     private static final String LEFT_SIGNATURE = "L";
     private static final String RIGHT_SIGNATURE = "R";
 
-    public Step(Point departurePoint, String direction, int value) {
+    public Step(final Point departurePoint, String direction, int value) {
         this.departurePoint = departurePoint;
         this.direction = direction;
         this.value = value;
@@ -51,7 +51,7 @@ public class Step {
     }
 
     public String toString(){
-        return "departure point: " + destinationPoint.toString() + ", destination point: " + destinationPoint.toString()
+        return "departure point: " + departurePoint.toString() + ", destination point: " + destinationPoint.toString()
         + ", direction: " + direction + ", value: " + value;
     }
 }
