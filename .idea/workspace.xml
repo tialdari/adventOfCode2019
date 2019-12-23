@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ecb9320-81e3-4255-8746-b3a54b14e2e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/day_3/CoordinatesPair.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day_3/Day3Puzzle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day_3/Point.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2019/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2019/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2019/common/Puzzle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2019/common/Puzzle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2019/day_2/Day2Puzzle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2019/day_2/Day2Puzzle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/Puzzle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/Puzzle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day_2/Day2Puzzle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day_2/Day2Puzzle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day_3/Day3Puzzle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day_3/Day3Puzzle.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/day_3/Day3Puzzle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+            <state relative-caret-position="417">
+              <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -111,6 +102,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>r961</find>
+      <find>cabl</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -191,7 +183,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1577047831182" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1577073427987" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -240,12 +232,12 @@
       <option name="presentableId" value="Default" />
       <updated>1576864975824</updated>
       <workItem from="1576864980190" duration="16437000" />
-      <workItem from="1577044195493" duration="3311000" />
+      <workItem from="1577044195493" duration="3717000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20776000" />
+    <option name="totallyTimeSpent" value="21182000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -258,6 +250,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" side_tool="true" visible="true" weight="0.2532189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -269,13 +262,13 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.75178826" visible="true" weight="0.3120482" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.75178826" weight="0.3120482" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4985694" weight="0.16506024" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.24821173" side_tool="true" visible="true" weight="0.3120482" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49785408" visible="true" weight="0.16506024" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50214595" side_tool="true" visible="true" weight="0.16506024" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3299363" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
@@ -451,8 +444,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/day_3/Day3Puzzle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="33" column="50" selection-start-line="33" selection-start-column="50" selection-end-line="33" selection-end-column="50" />
+        <state relative-caret-position="417">
+          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

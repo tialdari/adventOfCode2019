@@ -27,28 +27,23 @@ public class Day3Puzzle extends Puzzle {
 
     @Override
     public int computeResult() {
-
-        //System.out.print(getFileContentAsString());
-
+        
         List<String> inputInstructions = Arrays.asList(getFileContentAsString().split(" |,"));
-        initializeCablesPoints(inputInstructions);
-        //inputInstructions.stream().forEach(s -> System.out.println(s));
-
+        initializeCablesInstructions(inputInstructions);
+        initializeCablesPointsPairs();
+        
         return 0;
     }
 
+    private void initializeCablesPointsPairs() {
+    }
 
-    private void initializeCablesPoints(List<String> inputInstructions){
+
+    private void initializeCablesInstructions(List<String> inputInstructions){
 
         int secondCableFirstInstrIndex = inputInstructions.indexOf(SECOND_CABLE_FIRST_INSTRUCTION);
 
         cable1Instructions = inputInstructions.subList(0, secondCableFirstInstrIndex);
         cable2Instructions = inputInstructions.subList(secondCableFirstInstrIndex, inputInstructions.size() - 1);
-
-        System.out.print("cable 1 instructions: ");
-        cable1Instructions.stream().forEach(s -> System.out.println(s));
-
-        System.out.print("cable 2 instructions: ");
-        cable2Instructions.stream().forEach(s -> System.out.println(s));
     }
 }
