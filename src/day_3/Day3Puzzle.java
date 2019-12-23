@@ -27,23 +27,53 @@ public class Day3Puzzle extends Puzzle {
 
     @Override
     public int computeResult() {
-        
+
+        Step step1 = new Step(new Point(0, 0, 0), new Point(11, 0, 11), "R", 11);
+        Step step2 = new Step(new Point(5, -5, 10), new Point(5, 5, 10), "U", 10);
+
+        System.out.println(step1.isCrossed(step2));
+        System.out.println(step1.generateCrossPoint(step2).toString());
+
+
+        /*
         List<String> inputInstructions = Arrays.asList(getFileContentAsString().split(" |,"));
 
-        List<Step> cable1Steps = generateStepsList(inputInstructions);
-        List<Step> cable2Steps = generateStepsList(inputInstructions);
+        initializeCablesInstructions(inputInstructions.subList(1, inputInstructions.size()));
+
+        List<Step> cable1Steps = generateStepsList(cable1Instructions);
+        List<Step> cable2Steps = generateStepsList(cable2Instructions);
 
         cable1Steps.forEach(i -> System.out.println(i.toString()));
+        cable2Steps.forEach(i -> System.out.println(i.toString()));
 
-        //List<Point> crossPoints = generateCrossPoints(cable1Steps, cable2Steps);
+        List<Point> crossPoints = generateCrossPoints(cable1Steps, cable2Steps);
         //int result = getLeastManhattanValue(crossPoints);
+*/
 
         return 0;
     }
 
+    private List<Point> generateCrossPoints(List<Step> cable1Steps, List<Step> cable2Steps) {
+
+        List<Point> crossPoints = new ArrayList<>();
+
+        for(int i = 0; i < cable1Steps.size(); i++){
+            for(int j = 0; j < cable2Steps.size(); j++){
+                if(cable1Steps.get(i).isCrossed(cable2Steps.get(j))) crossPoints.add(new Point());
+            }
+        }
+        return crossPoints;
+    }
+
+    private Point generateCrossPoint(Step step1, Step step2){
+
+
+
+        return new Point();
+    }
+
     private List<Step> generateStepsList(List<String> inputInstructions) {
 
-        inputInstructions = inputInstructions.subList(1, inputInstructions.size());
         List<Step> stepsList = new ArrayList<>();
 
         Step nextStep;
@@ -78,7 +108,7 @@ public class Day3Puzzle extends Puzzle {
         int secondCableFirstInstrIndex = inputInstructions.indexOf(SECOND_CABLE_FIRST_INSTRUCTION);
 
         cable1Instructions = inputInstructions.subList(0, secondCableFirstInstrIndex);
-        cable2Instructions = inputInstructions.subList(secondCableFirstInstrIndex, inputInstructions.size() - 1);
+        cable2Instructions = inputInstructions.subList(secondCableFirstInstrIndex, inputInstructions.size());
     }
 
 

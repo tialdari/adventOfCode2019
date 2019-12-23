@@ -19,6 +19,13 @@ public class Step {
         destinationPoint = new Point();
     }
 
+    public Step(final Point departurePoint, final Point destinationPoint, String direction, int value) {
+        this.departurePoint = departurePoint;
+        this.direction = direction;
+        this.value = value;
+        this.destinationPoint = destinationPoint;
+    }
+
     public Point getDestinationPoint() {
         return destinationPoint;
     }
@@ -48,6 +55,23 @@ public class Step {
         }
 
         destinationPoint = new Point(destX, destY, departurePoint.getManhattanValue() + value);
+    }
+
+    public boolean isCrossed(Step otherStep){
+
+        if(this.departurePoint.getX() < otherStep.departurePoint.getX()
+                && this.destinationPoint.getX() > otherStep.destinationPoint.getX()
+                && this.departurePoint.getY() > otherStep.departurePoint.getY()
+                && this.destinationPoint.getY() < otherStep.destinationPoint.getY()) return true;
+
+        return false;
+    }
+
+    public Point generateCrossPoint(Step otherStep){
+
+        return new Point(otherStep.destinationPoint.getX(), this.departurePoint.getY(),
+                this.departurePoint.getManhattanValue() + (otherStep.destinationPoint.getX() - this.departurePoint.getX())
+                + this.departurePoint.getY() - otherStep.departurePoint.getY());
     }
 
     public String toString(){

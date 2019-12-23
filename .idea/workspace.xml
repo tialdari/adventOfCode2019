@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ecb9320-81e3-4255-8746-b3a54b14e2e5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2019/day_3/Day3Puzzle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2019/day_3/Day3Puzzle.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/day_3/Day3Puzzle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day_3/Day3Puzzle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/day_3/Step.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day_3/Step.java" afterDir="false" />
     </list>
@@ -23,8 +25,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/day_3/Day3Puzzle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="58" selection-start-line="58" selection-end-line="58" />
+            <state relative-caret-position="333">
+              <caret line="38" column="94" lean-forward="true" selection-start-line="38" selection-start-column="94" selection-end-line="38" selection-end-column="94" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -44,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/day_3/Step.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
+            <state relative-caret-position="388">
+              <caret line="73" column="78" selection-start-line="73" selection-start-column="78" selection-end-line="73" selection-end-column="78" />
             </state>
           </provider>
         </entry>
@@ -73,6 +75,7 @@
       <find>r961</find>
       <find>cabl</find>
       <find>r99</find>
+      <find>442</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -107,6 +110,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -148,7 +152,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -211,11 +214,14 @@
       <workItem from="1577073311137" duration="3189000" />
       <workItem from="1577076616362" duration="877000" />
       <workItem from="1577077525652" duration="710000" />
+      <workItem from="1577078249047" duration="548000" />
+      <workItem from="1577078837834" duration="221000" />
+      <workItem from="1577091604846" duration="1862000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25958000" />
+    <option name="totallyTimeSpent" value="28589000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -230,7 +236,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" side_tool="true" visible="true" weight="0.26037195" />
+      <window_info content_ui="combo" id="Project" order="0" side_tool="true" visible="true" weight="0.27110156" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" weight="0.3297568" />
@@ -240,11 +246,11 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7503576" weight="0.3120482" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7503576" visible="true" weight="0.3120482" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4985694" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49713877" weight="0.16506024" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50143063" side_tool="true" weight="0.4" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
@@ -306,12 +312,6 @@
           <line>17</line>
           <properties />
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/day_3/Day3Puzzle.java</url>
-          <line>49</line>
-          <properties />
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -432,8 +432,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/day_3/Day3Puzzle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        <state relative-caret-position="333">
+          <caret line="38" column="94" lean-forward="true" selection-start-line="38" selection-start-column="94" selection-end-line="38" selection-end-column="94" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -442,8 +442,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/day_3/Step.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
+        <state relative-caret-position="388">
+          <caret line="73" column="78" selection-start-line="73" selection-start-column="78" selection-end-line="73" selection-end-column="78" />
         </state>
       </provider>
     </entry>
