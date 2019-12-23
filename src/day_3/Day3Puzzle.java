@@ -28,14 +28,15 @@ public class Day3Puzzle extends Puzzle {
     @Override
     public int computeResult() {
 
+       /*
         Step step1 = new Step(new Point(0, 0, 0), new Point(11, 0, 11), "R", 11);
         Step step2 = new Step(new Point(5, -5, 10), new Point(5, 5, 10), "U", 10);
 
         System.out.println(step1.isCrossed(step2));
         System.out.println(step1.generateCrossPoint(step2).toString());
+        */
 
 
-        /*
         List<String> inputInstructions = Arrays.asList(getFileContentAsString().split(" |,"));
 
         initializeCablesInstructions(inputInstructions.subList(1, inputInstructions.size()));
@@ -43,12 +44,12 @@ public class Day3Puzzle extends Puzzle {
         List<Step> cable1Steps = generateStepsList(cable1Instructions);
         List<Step> cable2Steps = generateStepsList(cable2Instructions);
 
-        cable1Steps.forEach(i -> System.out.println(i.toString()));
-        cable2Steps.forEach(i -> System.out.println(i.toString()));
+        //cable1Steps.forEach(i -> System.out.println(i.toString()));
+        //cable2Steps.forEach(i -> System.out.println(i.toString()));
 
         List<Point> crossPoints = generateCrossPoints(cable1Steps, cable2Steps);
+        //crossPoints.forEach(i -> System.out.println(i.toString()));
         //int result = getLeastManhattanValue(crossPoints);
-*/
 
         return 0;
     }
@@ -56,10 +57,18 @@ public class Day3Puzzle extends Puzzle {
     private List<Point> generateCrossPoints(List<Step> cable1Steps, List<Step> cable2Steps) {
 
         List<Point> crossPoints = new ArrayList<>();
+        Point newCrossPoint;
 
         for(int i = 0; i < cable1Steps.size(); i++){
             for(int j = 0; j < cable2Steps.size(); j++){
-                if(cable1Steps.get(i).isCrossed(cable2Steps.get(j))) crossPoints.add(new Point());
+                if(cable1Steps.get(i).isCrossed(cable2Steps.get(j))){
+
+                    System.out.println(cable1Steps.get(i).toString() + ", " + cable2Steps.get(j).toString());
+                    newCrossPoint = cable1Steps.get(i).generateCrossPoint(cable2Steps.get(j));
+                    System.out.println("-> " + newCrossPoint.toString());
+
+                    crossPoints.add(newCrossPoint);
+                }
             }
         }
         return crossPoints;

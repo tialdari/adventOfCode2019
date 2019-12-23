@@ -69,7 +69,7 @@ public class Step {
 
     public Point generateCrossPoint(Step otherStep){
 
-        return new Point(otherStep.destinationPoint.getX(), this.departurePoint.getY(),
+        return new Point(this.destinationPoint.getX(), otherStep.departurePoint.getY(),
                 this.departurePoint.getManhattanValue() + (otherStep.destinationPoint.getX() - this.departurePoint.getX())
                 + this.departurePoint.getY() - otherStep.departurePoint.getY());
     }
