@@ -29,10 +29,43 @@ public class Day3Puzzle extends Puzzle {
     public int computeResult() {
         
         List<String> inputInstructions = Arrays.asList(getFileContentAsString().split(" |,"));
-        initializeCablesInstructions(inputInstructions);
-        initializeCablesPointsPairs();
-        
+
+        List<Step> cable1Steps = generateStepsList(inputInstructions);
+        List<Step> cable2Steps = generateStepsList(inputInstructions);
+
+        cable1Steps.forEach(i -> System.out.println(i.toString()));
+
+        //List<Point> crossPoints = generateCrossPoints(cable1Steps, cable2Steps);
+        //int result = getLeastManhattanValue(crossPoints);
+
         return 0;
+    }
+
+    private List<Step> generateStepsList(List<String> inputInstructions) {
+
+        inputInstructions = inputInstructions.subList(1, inputInstructions.size());
+        List<Step> stepsList = new ArrayList<>();
+
+        Step nextStep;
+        Point departurePoint = new Point(0, 0, 0);
+        String direction = String.valueOf(inputInstructions.get(0).charAt(0));
+        int stepValue = Integer.parseInt(inputInstructions.get(0).substring(1));
+        nextStep = new Step(departurePoint, direction, stepValue);
+        nextStep.computeDestinationPoint();
+
+        for(int i = 1; i < inputInstructions.size(); i++){
+
+            direction = String.valueOf(inputInstructions.get(i).charAt(0));
+            stepValue = Integer.parseInt(inputInstructions.get(i).substring(1));
+
+            nextStep = new Step(departurePoint, direction, stepValue);
+            nextStep.computeDestinationPoint();
+            stepsList.add(nextStep);
+
+            departurePoint = stepsList.get(i - 1).getDestinationPoint();
+        }
+
+        return stepsList;
     }
 
     private void initializeCablesPointsPairs() {
@@ -46,4 +79,6 @@ public class Day3Puzzle extends Puzzle {
         cable1Instructions = inputInstructions.subList(0, secondCableFirstInstrIndex);
         cable2Instructions = inputInstructions.subList(secondCableFirstInstrIndex, inputInstructions.size() - 1);
     }
+
+
 }
