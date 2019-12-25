@@ -1,6 +1,7 @@
 package day_3;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import common.Puzzle;
 
@@ -8,7 +9,7 @@ import java.util.ArrayList;
 
 public class Day3Puzzle extends Puzzle {
 
-    public final String SECOND_CABLE_FIRST_INSTRUCTION = "L1009";
+    public final String SECOND_CABLE_FIRST_INSTRUCTION = "U62";
 
     List<String> cable1Instructions;
     List<String> cable2Instructions;
@@ -28,15 +29,20 @@ public class Day3Puzzle extends Puzzle {
     @Override
     public int computeResult() {
 
-       /*
+
         Step step1 = new Step(new Point(0, 0, 0), new Point(11, 0, 11), "R", 11);
         Step step2 = new Step(new Point(5, -5, 10), new Point(5, 5, 10), "U", 10);
 
-        System.out.println(step1.isCrossed(step2));
+        System.out.println(step2.isCrossed(step1));
         System.out.println(step1.generateCrossPoint(step2).toString());
-        */
 
+        Step step3 = new Step(new Point(5, -5, 10), new Point(5, 5, 10), "U", 10);
+        Step step4 = new Step(new Point(0, 0, 0), new Point(11, 0, 11), "R", 11);
 
+        System.out.println(step3.isCrossed(step4));
+        System.out.println(step3.generateCrossPoint(step4).toString());
+
+        /*
         List<String> inputInstructions = Arrays.asList(getFileContentAsString().split(" |,"));
 
         initializeCablesInstructions(inputInstructions.subList(1, inputInstructions.size()));
@@ -49,8 +55,10 @@ public class Day3Puzzle extends Puzzle {
 
         List<Point> crossPoints = generateCrossPoints(cable1Steps, cable2Steps);
         //crossPoints.forEach(i -> System.out.println(i.toString()));
-        //int result = getLeastManhattanValue(crossPoints);
+        crossPoints.sort(new Sortbyname());
 
+        return crossPoints.get(crossPoints.size() - 1).getManhattanValue();
+        */
         return 0;
     }
 
@@ -72,13 +80,6 @@ public class Day3Puzzle extends Puzzle {
             }
         }
         return crossPoints;
-    }
-
-    private Point generateCrossPoint(Step step1, Step step2){
-
-
-
-        return new Point();
     }
 
     private List<Step> generateStepsList(List<String> inputInstructions) {
@@ -108,10 +109,6 @@ public class Day3Puzzle extends Puzzle {
         return stepsList;
     }
 
-    private void initializeCablesPointsPairs() {
-    }
-
-
     private void initializeCablesInstructions(List<String> inputInstructions){
 
         int secondCableFirstInstrIndex = inputInstructions.indexOf(SECOND_CABLE_FIRST_INSTRUCTION);
@@ -120,5 +117,13 @@ public class Day3Puzzle extends Puzzle {
         cable2Instructions = inputInstructions.subList(secondCableFirstInstrIndex, inputInstructions.size());
     }
 
-
+    private class Sortbyname implements Comparator<Point>
+    {
+        // Used for sorting in ascending order of
+        // roll name
+        public int compare(Point a, Point b)
+        {
+            return a.getManhattanValue() -(b.getManhattanValue());
+        }
+    }
 }

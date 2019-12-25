@@ -1,5 +1,7 @@
 package day_3;
 
+import java.util.Comparator;
+
 public class Point {
 
     private int x;
@@ -33,4 +35,15 @@ public class Point {
     public String toString(){
         return "x: " + x + ", y: " + y +", manhattanValue: " + manhattanValue;
     }
+
+   private class Sortbyname implements Comparator<Point>
+    {
+        // Used for sorting in ascending order of
+        // roll name
+        public int compare(Point a, Point b)
+        {
+            return a.getManhattanValue() -(b.getManhattanValue());
+        }
+    }
+
 }
