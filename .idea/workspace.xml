@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ecb9320-81e3-4255-8746-b3a54b14e2e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/resources/inputs/day_3_test.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2019/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2019/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2019/day_3/Day3Puzzle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2019/day_3/Day3Puzzle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2019/day_3/Point.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2019/day_3/Point.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2019/day_3/Step.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2019/day_3/Step.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/day_3/Day3Puzzle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day_3/Day3Puzzle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day_3/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day_3/Point.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/day_3/Step.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day_3/Step.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -31,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/day_3/Day3Puzzle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1180">
-              <caret line="127" column="5" selection-start-line="127" selection-start-column="5" selection-end-line="127" selection-end-column="5" />
+            <state relative-caret-position="352">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4332#4333#0" expanded="true" />
@@ -75,8 +67,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/day_3/Step.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="76" column="126" selection-start-line="76" selection-start-column="126" selection-end-line="76" selection-end-column="126" />
+            <state relative-caret-position="190">
+              <caret line="82" column="81" selection-start-line="82" selection-start-column="81" selection-end-line="82" selection-end-column="81" />
               <folding>
                 <element signature="e#1022#1023#0" expanded="true" />
                 <element signature="e#1078#1079#0" expanded="true" />
@@ -191,7 +183,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1577111495136" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1577297112858" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -251,12 +243,12 @@
       <workItem from="1577078249047" duration="548000" />
       <workItem from="1577078837834" duration="221000" />
       <workItem from="1577091604846" duration="9165000" />
-      <workItem from="1577293170734" duration="1071000" />
+      <workItem from="1577293170734" duration="3613000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36963000" />
+    <option name="totallyTimeSpent" value="39505000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -271,6 +263,39 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" side_tool="true" visible="true" weight="0.20958512" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Learn" order="3" weight="0.3297568" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Image Layers" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7503576" weight="0.3120482" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4985694" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49713877" weight="0.5228916" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50143063" side_tool="true" weight="0.4" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3299363" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49785408" weight="0.32891566" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24964234" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.3297568" />
+    </layout>
+    <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" side_tool="true" visible="true" weight="0.20958512" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
@@ -302,38 +327,6 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.3297568" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Designer" order="0" />
-      <window_info id="Image Layers" order="1" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info id="Learn" order="5" weight="0.3297568" />
-      <window_info content_ui="combo" id="Project" order="6" side_tool="true" visible="true" weight="0.24964234" />
-      <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.32891566" />
-      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="3" weight="0.32891566" />
-      <window_info anchor="bottom" id="Database Changes" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="5" weight="0.3299363" />
-      <window_info anchor="bottom" id="Message" order="6" />
-      <window_info anchor="bottom" id="Find" order="7" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.3120482" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="12" weight="0.32891566" />
-      <window_info anchor="right" id="Maven" order="0" />
-      <window_info anchor="right" id="Palette" order="1" />
-      <window_info anchor="right" id="Capture Analysis" order="2" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,6 +340,14 @@
           <line>17</line>
           <properties />
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/day_3/Step.java</url>
+          <line>73</line>
+          <properties class="day_3.Step" method="computeCrossPointManhattanValue">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -441,39 +442,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/inputs/day_3_input.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="123" selection-start-line="1" selection-start-column="120" selection-end-line="1" selection-end-column="123" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/inputs/day_3_test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/day_3/Day3Puzzle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1180">
-          <caret line="127" column="5" selection-start-line="127" selection-start-column="5" selection-end-line="127" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4332#4333#0" expanded="true" />
-            <element signature="e#4409#4410#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -484,10 +456,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/inputs/day_3_test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/day_3/Day3Puzzle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4332#4333#0" expanded="true" />
+            <element signature="e#4409#4410#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/day_3/Step.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="76" column="126" selection-start-line="76" selection-start-column="126" selection-end-line="76" selection-end-column="126" />
+        <state relative-caret-position="190">
+          <caret line="82" column="81" selection-start-line="82" selection-start-column="81" selection-end-line="82" selection-end-column="81" />
           <folding>
             <element signature="e#1022#1023#0" expanded="true" />
             <element signature="e#1078#1079#0" expanded="true" />

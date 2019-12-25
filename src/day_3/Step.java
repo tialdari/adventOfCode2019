@@ -59,37 +59,61 @@ public class Step {
 
     public boolean isCrossed(Step otherStep){
 
-        if(this.departurePoint.getX() < otherStep.departurePoint.getX()
+        if(this.departurePoint.getX() <= otherStep.departurePoint.getX()
                 && this.destinationPoint.getX() > otherStep.destinationPoint.getX()
                 && this.departurePoint.getY() > otherStep.departurePoint.getY()
-                && this.destinationPoint.getY() < otherStep.destinationPoint.getY()) return true;
-        else if(this.departurePoint.getY() < otherStep.departurePoint.getY()
+                && this.destinationPoint.getY() <= otherStep.destinationPoint.getY()) return true;
+        else if(this.departurePoint.getY() <= otherStep.departurePoint.getY()
                 && this.destinationPoint.getY() > otherStep.destinationPoint.getY()
                 && this.departurePoint.getX() > otherStep.departurePoint.getX()
-                && this.destinationPoint.getX() < otherStep.destinationPoint.getX()) return true;
+                && this.destinationPoint.getX() <= otherStep.destinationPoint.getX()) return true;
 
         return false;
     }
 
-    private int computeCrossPointManhattanValue(Step otherStep, boolean isVertical){
+    private int computeCrossPointManhattanValue(Step otherStep, boolean isHorizontal) {
+        if (this.departurePoint.getManhattanValue() < otherStep.departurePoint.getManhattanValue()) {
+            if ((this.direction.equals("R") || this.direction.equals("L"))) {
 
-        if(isVertical) return this.departurePoint.getManhattanValue() + (otherStep.destinationPoint.getX() - this.departurePoint.getX());
-        else return this.departurePoint.getManhattanValue() + (this.destinationPoint.getY() - otherStep.departurePoint.getY());
+                return this.departurePoint.getManhattanValue() + Math.abs(otherStep.destinationPoint.getX() - this.departurePoint.getX());
+            } else
+                return this.departurePoint.getManhattanValue() + Math.abs(otherStep.destinationPoint.getY() - this.departurePoint.getY());
+
+        } else if (this.departurePoint.getManhattanValue() >= otherStep.departurePoint.getManhattanValue()) {
+            if ((otherStep.direction.equals("R") || otherStep.direction.equals("L"))) {
+
+                return otherStep.departurePoint.getManhattanValue() + Math.abs(this.destinationPoint.getX() - otherStep.departurePoint.getX());
+            } else
+                return otherStep.departurePoint.getManhattanValue() + Math.abs(this.destinationPoint.getY() - otherStep.departurePoint.getY());
+        }
+
+        return -1;
     }
+
+
+//        Point initialPoint;
+//
+//        if(this.departurePoint.getManhattanValue() < otherStep.departurePoint.getManhattanValue()){
+//            initialPoint = this.departurePoint;
+//        }
+//        else initialPoint = otherStep.departurePoint;
+//
+//        if(isHorizontal)
+//        else return
 
     public Point generateCrossPoint(Step otherStep){
 
-        if(this.departurePoint.getX() < otherStep.departurePoint.getX()
-                && this.destinationPoint.getX() > otherStep.destinationPoint.getX()
-                && this.departurePoint.getY() > otherStep.departurePoint.getY()
-                && this.destinationPoint.getY() < otherStep.destinationPoint.getY())
+        if(this.departurePoint.getX() <= otherStep.departurePoint.getX()
+                && this.destinationPoint.getX() >= otherStep.destinationPoint.getX()
+                && this.departurePoint.getY() >= otherStep.departurePoint.getY()
+                && this.destinationPoint.getY() <= otherStep.destinationPoint.getY())
             return new Point(otherStep.departurePoint.getX(), this.destinationPoint.getY(), computeCrossPointManhattanValue(otherStep, true));
 
 
-        else if(this.departurePoint.getY() < otherStep.departurePoint.getY()
-                && this.destinationPoint.getY() > otherStep.destinationPoint.getY()
-                && this.departurePoint.getX() > otherStep.departurePoint.getX()
-                && this.destinationPoint.getX() < otherStep.destinationPoint.getX()) return new Point(this.destinationPoint.getX(), otherStep.departurePoint.getY(),
+        else if(this.departurePoint.getY() <= otherStep.departurePoint.getY()
+                && this.destinationPoint.getY() >= otherStep.destinationPoint.getY()
+                && this.departurePoint.getX() >= otherStep.departurePoint.getX()
+                && this.destinationPoint.getX() <= otherStep.destinationPoint.getX()) return new Point(this.destinationPoint.getX(), otherStep.departurePoint.getY(),
                 computeCrossPointManhattanValue(otherStep, false));
         return new Point();
     }

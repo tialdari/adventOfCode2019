@@ -30,16 +30,18 @@ public class Day3Puzzle extends Puzzle {
     public int computeResult() {
 
 
-        Step step1 = new Step(new Point(0, 0, 0), new Point(11, 0, 11), "R", 11);
-        Step step2 = new Step(new Point(5, -5, 10), new Point(5, 5, 10), "U", 10);
+        Step step1 = new Step(new Point(0, 0, 0), new Point(12, 0, 11), "R", 11);
+        Step step2 = new Step(new Point(7, -2, 9), new Point(7, 3, 10), "U", 5);
 
         System.out.println(step2.isCrossed(step1));
+        Point resultPoint= step1.generateCrossPoint(step2);
         System.out.println(step1.generateCrossPoint(step2).toString());
 
-        Step step3 = new Step(new Point(5, -5, 10), new Point(5, 5, 10), "U", 10);
-        Step step4 = new Step(new Point(0, 0, 0), new Point(11, 0, 11), "R", 11);
+        Step step3 = new Step(new Point(7, -2, 9), new Point(7, 3, 10), "U", 5);
+        Step step4 = new Step(new Point(0, 0, 0), new Point(12, 0, 12), "R", 11);
 
         System.out.println(step3.isCrossed(step4));
+        Point resultPoint2= step3.generateCrossPoint(step4);
         System.out.println(step3.generateCrossPoint(step4).toString());
 
         /*
