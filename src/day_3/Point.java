@@ -4,6 +4,8 @@ import java.util.Comparator;
 
 public class Point {
 
+    private final int initialX = 0;
+    private final int initialY = 0;
     private int x;
     private int y;
     private int manhattanValue;
@@ -14,10 +16,9 @@ public class Point {
         manhattanValue = 0;
     }
 
-    public Point(int x, int y, int manhattanValue ) {
+    public Point(int x, int y) {
         this.x = x;
         this.y = y;
-        this.manhattanValue = manhattanValue;
     }
 
     public int getX() {
@@ -32,6 +33,11 @@ public class Point {
         return manhattanValue;
     }
 
+    public void computeManhattanValue(){
+
+        manhattanValue = Math.abs(x - initialX) + Math.abs(y - initialY);
+    }
+
     public String toString(){
         return "x: " + x + ", y: " + y +", manhattanValue: " + manhattanValue;
     }
@@ -44,6 +50,10 @@ public class Point {
         {
             return a.getManhattanValue() -(b.getManhattanValue());
         }
+    }
+
+    public boolean equals(Point obj) {
+        return (this.x == obj.x && this.y == obj.y);
     }
 
 }

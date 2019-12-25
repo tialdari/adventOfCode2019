@@ -30,19 +30,21 @@ public class Day3Puzzle extends Puzzle {
     public int computeResult() {
 
 
-        Step step1 = new Step(new Point(0, 0, 0), new Point(12, 0, 11), "R", 11);
-        Step step2 = new Step(new Point(7, -2, 9), new Point(7, 3, 10), "U", 5);
+        Step step1 = new Step(new Point(5, 10), new Point(5, 0), "D", 5);
+        Step step2 = new Step(new Point(4, 7), new Point(10, 7), "R", 6);
 
-        System.out.println(step2.isCrossed(step1));
+        System.out.println(step1.isCrossed(step2));
         Point resultPoint= step1.generateCrossPoint(step2);
+        resultPoint.computeManhattanValue();
         System.out.println(step1.generateCrossPoint(step2).toString());
 
-        Step step3 = new Step(new Point(7, -2, 9), new Point(7, 3, 10), "U", 5);
-        Step step4 = new Step(new Point(0, 0, 0), new Point(12, 0, 12), "R", 11);
+        Step step3 = new Step(new Point(7, -2), new Point(7, 3), "U", 5);
+        Step step4 = new Step(new Point(0, 0), new Point(12, 0), "R", 11);
 
         System.out.println(step3.isCrossed(step4));
         Point resultPoint2= step3.generateCrossPoint(step4);
-        System.out.println(step3.generateCrossPoint(step4).toString());
+        resultPoint2.computeManhattanValue();
+        System.out.println(resultPoint2.toString());
 
         /*
         List<String> inputInstructions = Arrays.asList(getFileContentAsString().split(" |,"));
@@ -60,7 +62,7 @@ public class Day3Puzzle extends Puzzle {
         crossPoints.sort(new Sortbyname());
 
         return crossPoints.get(crossPoints.size() - 1).getManhattanValue();
-        */
+*/
         return 0;
     }
 
@@ -89,7 +91,7 @@ public class Day3Puzzle extends Puzzle {
         List<Step> stepsList = new ArrayList<>();
 
         Step nextStep;
-        Point departurePoint = new Point(0, 0, 0);
+        Point departurePoint = new Point(0, 0);
         String direction = String.valueOf(inputInstructions.get(0).charAt(0));
         int stepValue = Integer.parseInt(inputInstructions.get(0).substring(1));
         nextStep = new Step(departurePoint, direction, stepValue);
@@ -102,8 +104,7 @@ public class Day3Puzzle extends Puzzle {
             stepValue = Integer.parseInt(inputInstructions.get(i).substring(1));
 
             nextStep = new Step(new Point(stepsList.get(i - 1).getDestinationPoint().getX(),
-                    stepsList.get(i - 1).getDestinationPoint().getY(),
-                    stepsList.get(i - 1).getDestinationPoint().getManhattanValue()), direction, stepValue);
+                    stepsList.get(i - 1).getDestinationPoint().getY()), direction, stepValue);
             nextStep.computeDestinationPoint();
             stepsList.add(nextStep);
         }
