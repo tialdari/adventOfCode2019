@@ -60,26 +60,41 @@ public class Step {
 
     public boolean isCrossed(Step otherStep){
 
-       
+        if (this.direction != otherStep.direction) {
+
+            if (this.direction == "U" || this.direction == "D") {
+                // Check if the first line is in horizontal range of the second line and
+                // if the second line is in vertical range of the first line
+                if (((this.departurePoint.getX() >= otherStep.departurePoint.getX() && this.departurePoint.getX() <= otherStep.destinationPoint.getX())
+                        || ((this.departurePoint.getX() <= otherStep.departurePoint.getX() && this.departurePoint.getX() >= otherStep.destinationPoint.getX())))
+                        && ((otherStep.departurePoint.getY() >= this.departurePoint.getY() && otherStep.departurePoint.getY() <= this.destinationPoint.getY())
+                        || (otherStep.departurePoint.getY() <= this.departurePoint.getY() && otherStep.departurePoint.getY() >= this.destinationPoint.getY())))
+                    return true;
+            } else {
+                // Check if the first line is in vertical range of the second line and
+                // if the second line is in horizontal range of the first line
+                if (((this.departurePoint.getY() >= otherStep.departurePoint.getY() && this.departurePoint.getY() <= otherStep.destinationPoint.getY())
+                        || (this.departurePoint.getY() <= otherStep.departurePoint.getY() && this.departurePoint.getY() >= otherStep.destinationPoint.getY()))
+                        && ((otherStep.departurePoint.getX() >= this.departurePoint.getX() && otherStep.departurePoint.getX() <= this.destinationPoint.getX())
+                        || (otherStep.departurePoint.getX() <= this.departurePoint.getX() && otherStep.departurePoint.getX() >= this.destinationPoint.getX())))
+                    return true;
+            }
+        }
+
+        return false;
     }
 
     public Point generateCrossPoint(Step otherStep){
 
-        Point crossPoint = new Point();
+        if (isCrossed(otherStep)) {
+            if (this.direction == "U" || this.direction == "D") {
+                return new Point(this.departurePoint.getX(), otherStep.destinationPoint.getY());
+            } else {
+                return new Point(otherStep.destinationPoint.getX(), this.departurePoint.getY());
+            }
+        }
 
-        if(this.departurePoint.getX() <= otherStep.departurePoint.getX()
-                && this.destinationPoint.getX() >= otherStep.destinationPoint.getX()
-                && this.departurePoint.getY() >= otherStep.departurePoint.getY()
-                && this.destinationPoint.getY() <= otherStep.destinationPoint.getY())
-            crossPoint = new Point(otherStep.departurePoint.getX(), this.destinationPoint.getY());
-
-        else if(this.departurePoint.getY() <= otherStep.departurePoint.getY()
-                && this.destinationPoint.getY() >= otherStep.destinationPoint.getY()
-                && this.departurePoint.getX() >= otherStep.departurePoint.getX()
-                && this.destinationPoint.getX() <= otherStep.destinationPoint.getX())
-            crossPoint = new Point(this.departurePoint.getX(), otherStep.destinationPoint.getY());
-
-        return crossPoint;
+        return null;
     }
 
     public String toString(){

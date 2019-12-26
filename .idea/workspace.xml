@@ -3,10 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="4ecb9320-81e3-4255-8746-b3a54b14e2e5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2019/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2019/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2019/day_3/Day3Puzzle$Sortbyname.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2019/day_3/Day3Puzzle$Sortbyname.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2019/day_3/Day3Puzzle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2019/day_3/Day3Puzzle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2019/day_3/Step.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2019/day_3/Step.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AdventOfCode2019/resources/inputs/day_3_test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AdventOfCode2019/resources/inputs/day_3_test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/day_3/Day3Puzzle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day_3/Day3Puzzle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day_3/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day_3/Point.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/day_3/Step.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day_3/Step.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/inputs/day_3_test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/inputs/day_3_test.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,12 +31,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/day_3/Day3Puzzle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="46" column="50" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
+            <state relative-caret-position="207">
+              <caret line="72" selection-start-line="72" selection-end-line="72" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4684#4685#0" expanded="true" />
-                <element signature="e#4761#4762#0" expanded="true" />
+                <element signature="e#4611#4612#0" expanded="true" />
+                <element signature="e#4688#4689#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -40,8 +45,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/resources/inputs/day_3_test.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="15">
+              <caret line="1" column="3" selection-start-line="1" selection-end-line="1" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -49,8 +54,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="270">
+              <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -62,11 +67,7 @@
         <entry file="file://$PROJECT_DIR$/src/day_3/Point.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="494">
-              <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
-              <folding>
-                <element signature="e#1100#1101#0" expanded="true" />
-                <element signature="e#1136#1137#0" expanded="true" />
-              </folding>
+              <caret line="59" selection-start-line="59" selection-end-line="59" />
             </state>
           </provider>
         </entry>
@@ -74,8 +75,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/day_3/Step.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
+            <state relative-caret-position="320">
+              <caret line="78" column="127" selection-start-line="78" selection-start-column="127" selection-end-line="78" selection-end-column="127" />
               <folding>
                 <element signature="e#1022#1023#0" expanded="true" />
                 <element signature="e#1078#1079#0" expanded="true" />
@@ -88,7 +89,7 @@
         <entry file="file://$PROJECT_DIR$/src/resources/inputs/day_3_input.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="1" column="123" selection-start-line="1" selection-start-column="120" selection-end-line="1" selection-end-column="123" />
+              <caret line="1" column="5" selection-start-line="1" selection-end-line="1" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -122,10 +123,10 @@
         <option value="$PROJECT_DIR$/src/day_1/Day1Puzzle.java" />
         <option value="$PROJECT_DIR$/src/day_2/Day2Puzzle.java" />
         <option value="$PROJECT_DIR$/src/common/Puzzle.java" />
-        <option value="$PROJECT_DIR$/src/resources/inputs/day_3_test.txt" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/day_3/Day3Puzzle.java" />
         <option value="$PROJECT_DIR$/src/day_3/Point.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/resources/inputs/day_3_test.txt" />
+        <option value="$PROJECT_DIR$/src/day_3/Day3Puzzle.java" />
         <option value="$PROJECT_DIR$/src/day_3/Step.java" />
       </list>
     </option>
@@ -143,7 +144,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -185,6 +185,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -251,11 +252,14 @@
       <workItem from="1577078837834" duration="221000" />
       <workItem from="1577091604846" duration="9165000" />
       <workItem from="1577293170734" duration="7365000" />
+      <workItem from="1577317643128" duration="290000" />
+      <workItem from="1577355946027" duration="2582000" />
+      <workItem from="1577378504070" duration="679000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43257000" />
+    <option name="totallyTimeSpent" value="46808000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -270,7 +274,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" side_tool="true" visible="true" weight="0.20958512" />
+      <window_info content_ui="combo" id="Project" order="0" side_tool="true" visible="true" weight="0.21816881" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" weight="0.3297568" />
@@ -280,12 +284,12 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7503576" weight="0.3120482" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7503576" visible="true" weight="0.3120482" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4985694" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49713877" weight="0.5228916" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49713877" weight="0.36746988" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50143063" side_tool="true" weight="0.4" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3299363" />
@@ -347,6 +351,14 @@
           <line>17</line>
           <properties />
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/day_3/Day3Puzzle.java</url>
+          <line>69</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -444,54 +456,50 @@
     <entry file="file://$PROJECT_DIR$/src/resources/inputs/day_3_input.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="123" selection-start-line="1" selection-start-column="120" selection-end-line="1" selection-end-column="123" />
+          <caret line="1" column="5" selection-start-line="1" selection-end-line="1" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/inputs/day_3_test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="3" selection-start-line="1" selection-end-line="1" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/day_3/Day3Puzzle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="46" column="50" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
+        <state relative-caret-position="207">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4684#4685#0" expanded="true" />
-            <element signature="e#4761#4762#0" expanded="true" />
+            <element signature="e#4611#4612#0" expanded="true" />
+            <element signature="e#4688#4689#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="270">
+          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/inputs/day_3_test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/day_3/Point.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
-          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
-          <folding>
-            <element signature="e#1100#1101#0" expanded="true" />
-            <element signature="e#1136#1137#0" expanded="true" />
-          </folding>
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/day_3/Step.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
+        <state relative-caret-position="320">
+          <caret line="78" column="127" selection-start-line="78" selection-start-column="127" selection-end-line="78" selection-end-column="127" />
           <folding>
             <element signature="e#1022#1023#0" expanded="true" />
             <element signature="e#1078#1079#0" expanded="true" />

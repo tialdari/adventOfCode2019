@@ -17,6 +17,6 @@ public class Main {
 
         Puzzle day3Puzzle = new Day3Puzzle();
         day3Puzzle.initialize("day_3_test.txt");
-        day3Puzzle.computeResult();
+        System.out.print(day3Puzzle.computeResult());
     }
 }

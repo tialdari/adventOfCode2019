@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class Day3Puzzle extends Puzzle {
 
-    public final String SECOND_CABLE_FIRST_INSTRUCTION = "U62";
+    public final String SECOND_CABLE_FIRST_INSTRUCTION = "U98";
 
     List<String> cable1Instructions;
     List<String> cable2Instructions;
@@ -29,7 +29,7 @@ public class Day3Puzzle extends Puzzle {
     @Override
     public int computeResult() {
 
-
+/*
         Step step1 = new Step(new Point(5, 10), new Point(5, 0), "D", 5);
         Step step2 = new Step(new Point(4, 7), new Point(10, 7), "R", 6);
 
@@ -46,7 +46,16 @@ public class Day3Puzzle extends Puzzle {
         resultPoint2.computeManhattanValue();
         System.out.println(resultPoint2.toString());
 
-        /*
+        Step step5 = new Step(new Point(12, 3), new Point(1, 3), "L", 11);
+        Step step6 = new Step(new Point(2, 6), new Point(2, -4), "U", 10);
+
+        System.out.println(step5.isCrossed(step6));
+        Point resultPoint3= step5.generateCrossPoint(step6);
+        resultPoint3.computeManhattanValue();
+        System.out.println(resultPoint3.toString());
+*/
+
+
         List<String> inputInstructions = Arrays.asList(getFileContentAsString().split(" |,"));
 
         initializeCablesInstructions(inputInstructions.subList(1, inputInstructions.size()));
@@ -58,12 +67,12 @@ public class Day3Puzzle extends Puzzle {
         //cable2Steps.forEach(i -> System.out.println(i.toString()));
 
         List<Point> crossPoints = generateCrossPoints(cable1Steps, cable2Steps);
-        //crossPoints.forEach(i -> System.out.println(i.toString()));
+        crossPoints.forEach(i -> i.computeManhattanValue());
         crossPoints.sort(new Sortbyname());
 
-        return crossPoints.get(crossPoints.size() - 1).getManhattanValue();
-*/
-        return 0;
+        return crossPoints.get(0).getManhattanValue();
+
+//return 0;
     }
 
     private List<Point> generateCrossPoints(List<Step> cable1Steps, List<Step> cable2Steps) {
