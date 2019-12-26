@@ -60,27 +60,84 @@ public class Step {
 
     public boolean isCrossed(Step otherStep){
 
+        Point p1, p_1, p2, p_2;
+        p1 = this.departurePoint;
+        p_1 = this.destinationPoint;
+        p2 = otherStep.departurePoint;
+        p_2 = otherStep.destinationPoint;
+
         if (this.direction != otherStep.direction) {
 
-            if (this.direction == "U" || this.direction == "D") {
-                // Check if the first line is in horizontal range of the second line and
-                // if the second line is in vertical range of the first line
-                if (((this.departurePoint.getX() >= otherStep.departurePoint.getX() && this.departurePoint.getX() <= otherStep.destinationPoint.getX())
-                        || ((this.departurePoint.getX() <= otherStep.departurePoint.getX() && this.departurePoint.getX() >= otherStep.destinationPoint.getX())))
-                        && ((otherStep.departurePoint.getY() >= this.departurePoint.getY() && otherStep.departurePoint.getY() <= this.destinationPoint.getY())
-                        || (otherStep.departurePoint.getY() <= this.departurePoint.getY() && otherStep.departurePoint.getY() >= this.destinationPoint.getY())))
-                    return true;
+            if (this.direction == "R" || this.direction == "L") {
+
+                if(case1(p1, p_1, p2, p_2) == true || case2(p1, p_1, p2, p_2) == true
+                || case3(p1, p_1, p2, p_2) == true || case4(p1, p_1, p2, p_2) == true) return true;
+
             } else {
-                // Check if the first line is in vertical range of the second line and
-                // if the second line is in horizontal range of the first line
-                if (((this.departurePoint.getY() >= otherStep.departurePoint.getY() && this.departurePoint.getY() <= otherStep.destinationPoint.getY())
-                        || (this.departurePoint.getY() <= otherStep.departurePoint.getY() && this.departurePoint.getY() >= otherStep.destinationPoint.getY()))
-                        && ((otherStep.departurePoint.getX() >= this.departurePoint.getX() && otherStep.departurePoint.getX() <= this.destinationPoint.getX())
-                        || (otherStep.departurePoint.getX() <= this.departurePoint.getX() && otherStep.departurePoint.getX() >= this.destinationPoint.getX())))
-                    return true;
+                if(case5(p1, p_1, p2, p_2) == true || case6(p1, p_1, p2, p_2) == true
+                || case7(p1, p_1, p2, p_2) == true || case8(p1, p_1, p2, p_2) == true) return true;
             }
         }
 
+        return false;
+    }
+
+    private boolean case1(Point p1, Point p_1, Point p2, Point p_2){
+
+        if(p1.getX() <= p2.getX() && p_1.getX() >= p2.getX()
+        && p2.getY() <= p1.getY() && p_2.getY() >= p1.getY()) return true;
+        return false;
+    }
+
+    private boolean case2(Point p1, Point p_1, Point p2, Point p_2){
+
+        if(p1.getX() >= p2.getX() && p_1.getX() <= p2.getX()
+        && p2.getY() <= p1.getY() && p_2.getY() >= p1.getY()) return true;
+        return false;
+
+    }
+
+    private boolean case3(Point p1, Point p_1, Point p2, Point p_2){
+
+        if(p1.getX() <= p2.getX() && p_1.getX() >= p2.getX()
+        && p2.getY() >= p1.getY() && p_2.getY() <= p1.getY()) return true;
+        return false;
+
+    }
+
+    private boolean case4(Point p1, Point p_1, Point p2, Point p_2){
+
+        if(p1.getX() >= p2.getX() && p_1.getX() <= p2.getX()
+        && p2.getY() >= p1.getY() && p_2.getY() <= p1.getY()) return true;
+        return false;
+    }
+
+    private boolean case5(Point p1, Point p_1, Point p2, Point p_2){
+
+        if(p2.getX() <= p1.getX() && p_2.getX() >= p1.getX()
+                && p1.getY() <= p2.getY() && p_1.getY() >= p2.getY()) return true;
+        return false;
+
+    }
+
+    private boolean case6(Point p1, Point p_1, Point p2, Point p_2){
+
+        if(p2.getX() >= p1.getX() && p_2.getX() <= p1.getX()
+                && p1.getY() <= p2.getY() && p_1.getY() >= p2.getY()) return true;
+        return false;
+    }
+
+    private boolean case7(Point p1, Point p_1, Point p2, Point p_2){
+
+        if(p2.getX() <= p1.getX() && p_2.getX() >= p1.getX()
+                && p1.getY() >= p2.getY() && p_1.getY() <= p2.getY()) return true;
+        return false;
+    }
+
+    private boolean case8(Point p1, Point p_1, Point p2, Point p_2){
+
+        if(p2.getX() >= p1.getX() && p_2.getX() <= p1.getX()
+                && p1.getY() >= p2.getY() && p_1.getY() <= p2.getY()) return true;
         return false;
     }
 

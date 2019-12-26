@@ -30,32 +30,44 @@ public class Day3Puzzle extends Puzzle {
     public int computeResult() {
 
 /*
-        Step step1 = new Step(new Point(5, 10), new Point(5, 0), "D", 5);
-        Step step2 = new Step(new Point(4, 7), new Point(10, 7), "R", 6);
+        Point p1 = new Point(1, 1);
+        Point p_1 = new Point(5, 1);
+        Point p2 = new Point(3, -1);
+        Point p_2 = new Point(3, 3);
 
+        Step step1 = new Step(p1, p_1, "R", 5);
+        Step step2 = new Step(p2,p_2, "U", 6);
         System.out.println(step1.isCrossed(step2));
-        Point resultPoint= step1.generateCrossPoint(step2);
-        resultPoint.computeManhattanValue();
-        System.out.println(step1.generateCrossPoint(step2).toString());
 
-        Step step3 = new Step(new Point(7, -2), new Point(7, 3), "U", 5);
-        Step step4 = new Step(new Point(0, 0), new Point(12, 0), "R", 11);
-
+        Step step3 = new Step(p_1, p1, "L", 5);
+        Step step4 = new Step(p2,p_2, "U", 6);
         System.out.println(step3.isCrossed(step4));
-        Point resultPoint2= step3.generateCrossPoint(step4);
-        resultPoint2.computeManhattanValue();
-        System.out.println(resultPoint2.toString());
 
-        Step step5 = new Step(new Point(12, 3), new Point(1, 3), "L", 11);
-        Step step6 = new Step(new Point(2, 6), new Point(2, -4), "U", 10);
-
+        Step step5 = new Step(p1, p_1, "R", 5);
+        Step step6 = new Step(p_2,p2, "D", 6);
         System.out.println(step5.isCrossed(step6));
-        Point resultPoint3= step5.generateCrossPoint(step6);
-        resultPoint3.computeManhattanValue();
-        System.out.println(resultPoint3.toString());
+
+        Step step7 = new Step(p_1, p1, "L", 5);
+        Step step8 = new Step(p_2,p2, "D", 6);
+        System.out.println(step7.isCrossed(step8));
+
+        Step step9 = new Step(p2, p_2, "U", 5);
+        Step step10 = new Step(p1,p_1, "R", 6);
+        System.out.println(step9.isCrossed(step10));
+
+        Step step11 = new Step(p_2, p2, "D", 5);
+        Step step12 = new Step(p1,p_1, "R", 6);
+        System.out.println(step11.isCrossed(step12));
+
+        Step step13 = new Step(p2, p_2, "U", 5);
+        Step step14 = new Step(p_1,p1, "L", 6);
+        System.out.println(step13.isCrossed(step14));
+
+        Step step15 = new Step(p_2,p2, "D", 5);
+        Step step16 = new Step(p_1,p1, "L", 6);
+        System.out.println(step15.isCrossed(step16));
 */
-
-
+/*
         List<String> inputInstructions = Arrays.asList(getFileContentAsString().split(" |,"));
 
         initializeCablesInstructions(inputInstructions.subList(1, inputInstructions.size()));
@@ -71,8 +83,9 @@ public class Day3Puzzle extends Puzzle {
         crossPoints.sort(new Sortbyname());
 
         return crossPoints.get(0).getManhattanValue();
+        */
 
-//return 0;
+    return 0;
     }
 
     private List<Point> generateCrossPoints(List<Step> cable1Steps, List<Step> cable2Steps) {
