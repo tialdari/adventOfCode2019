@@ -27,6 +27,11 @@ public class Day1Puzzle extends Puzzle {
         return modulesFuel + fuelForFuel;
     }
 
+    @Override
+    public int computeSecondPartResult() {
+        return 0;
+    }
+
     private int computeOneModuleFuel(int input){
 
         return (input /3) - 2;

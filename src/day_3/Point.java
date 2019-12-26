@@ -9,16 +9,26 @@ public class Point {
     private int x;
     private int y;
     private int manhattanValue;
+    private int stepsNum;
 
     public Point() {
         x = 0;
         y = 0;
         manhattanValue = 0;
+        stepsNum = 0;
     }
 
     public Point(int x, int y) {
         this.x = x;
         this.y = y;
+        manhattanValue = 0;
+    }
+
+    public Point(int x, int y, int stepsNum) {
+        this.x = x;
+        this.y = y;
+        manhattanValue = 0;
+        this.stepsNum = stepsNum;
     }
 
     public int getX() {

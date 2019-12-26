@@ -29,18 +29,33 @@ public class Day3Puzzle extends Puzzle {
     @Override
     public int computeResult() {
 
-        List<String> inputInstructions = Arrays.asList(getFileContentAsString().split(" |,"));
+        List<Point> crossPoints = generateCrossPointsFromInput(getFileContentAsString());
+        crossPoints.forEach(i -> i.computeManhattanValue());
+        crossPoints.sort(new PointsComparator());
+
+        return crossPoints.get(0).getManhattanValue();
+    }
+
+    @Override
+    public int computeSecondPartResult() {
+
+        List<Point> crossPoints = generateCrossPointsFromInput(getFileContentAsString());
+
+
+        return 0;
+    }
+
+    private List<Point> generateCrossPointsFromInput(String input){
+
+
+        List<String> inputInstructions = Arrays.asList(input.split(" |,"));
 
         initializeCablesInstructions(inputInstructions.subList(1, inputInstructions.size()));
 
         List<Step> cable1Steps = generateStepsList(cable1Instructions);
         List<Step> cable2Steps = generateStepsList(cable2Instructions);
 
-        List<Point> crossPoints = generateCrossPoints(cable1Steps, cable2Steps);
-        crossPoints.forEach(i -> i.computeManhattanValue());
-        crossPoints.sort(new PointsComparator());
-
-        return crossPoints.get(0).getManhattanValue();
+        return generateCrossPoints(cable1Steps, cable2Steps);
     }
 
     private List<Point> generateCrossPoints(List<Step> cable1Steps, List<Step> cable2Steps) {

@@ -25,6 +25,9 @@ public abstract class Puzzle {
 
     public abstract int computeResult();
 
+    public abstract int computeSecondPartResult();
+
+
     public List<String> toArrayList(){
 
         BufferedReader bufferedReader = io.getFileContent();

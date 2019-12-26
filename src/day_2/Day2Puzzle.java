@@ -30,6 +30,11 @@ public class Day2Puzzle extends Puzzle {
 
     }
 
+    @Override
+    public int computeSecondPartResult() {
+        return 0;
+    }
+
     private int[] replaceNumbers(int[] intcode, int pos1ReplaceNum, int pos2ReplaceNum){
 
         intcode[1] = pos1ReplaceNum;
