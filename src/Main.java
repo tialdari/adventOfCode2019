@@ -16,7 +16,12 @@ public class Main {
         System.out.println("Result:" + day2Puzzle.computeResult());
 
         Puzzle day3Puzzle = new Day3Puzzle();
-        day3Puzzle.initialize("day_3_input.txt");
-        System.out.print(day3Puzzle.computeResult());
+//        day3Puzzle.initialize("day_3_test_input.txt");
+//        System.out.println("First part result, test1 (159): " + day3Puzzle.computeResult());
+//        System.out.println("Second part result, test1 (620): " + day3Puzzle.computeSecondPartResult());
+
+        day3Puzzle.initialize("day_3_test_input2.txt");
+        System.out.println("First part result, test2 (135): " + day3Puzzle.computeResult());
+        System.out.println("Second part result, test2 (410): " + day3Puzzle.computeSecondPartResult());
     }
 }

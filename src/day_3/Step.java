@@ -26,6 +26,10 @@ public class Step {
         this.destinationPoint = destinationPoint;
     }
 
+    public Point getDeparturePoint() {
+        return departurePoint;
+    }
+
     public Point getDestinationPoint() {
         return destinationPoint;
     }
@@ -86,14 +90,28 @@ public class Step {
 
     public Point generateCrossPoint(Step otherStep){
 
+        int thisStepStepsNum;
+        int otherStepStepsNum;
+        Point newCrossPoint;
+
         if (isCrossed(otherStep)) {
-            if (this.direction.equals("U") || this.direction.equals("D")) {
-                return new Point(this.departurePoint.getX(), otherStep.destinationPoint.getY());
-            } else {
-                return new Point(otherStep.destinationPoint.getX(), this.departurePoint.getY());
+            if (this.direction.equals("U") || this.direction.equals("D")){
+
+                newCrossPoint = new Point(this.departurePoint.getX(), otherStep.destinationPoint.getY());
+                thisStepStepsNum = this.departurePoint.countSteps(newCrossPoint);
+                otherStepStepsNum = otherStep.departurePoint.countSteps(newCrossPoint);
+                newCrossPoint.setStepsNum(thisStepStepsNum + otherStepStepsNum);
+                return newCrossPoint;
+
+            } else if (this.direction.equals("R") || this.direction.equals("L")) {
+
+                newCrossPoint = new Point(otherStep.destinationPoint.getX(), this.departurePoint.getY());
+                thisStepStepsNum = this.departurePoint.countSteps(newCrossPoint);
+                otherStepStepsNum = otherStep.departurePoint.countSteps(newCrossPoint);
+                newCrossPoint.setStepsNum(thisStepStepsNum + otherStepStepsNum);
+                return newCrossPoint;
             }
         }
-
         return null;
     }
 

@@ -43,6 +43,14 @@ public class Point {
         return manhattanValue;
     }
 
+    public int getStepsNum() {
+        return stepsNum;
+    }
+
+    public void setStepsNum(int stepsNum) {
+        this.stepsNum = stepsNum;
+    }
+
     public void computeManhattanValue(){
 
         manhattanValue = Math.abs(x - initialX) + Math.abs(y - initialY);
@@ -66,4 +74,13 @@ public class Point {
         return (this.x == obj.x && this.y == obj.y);
     }
 
+    public int countSteps(Point point){
+
+        if(point.x == this.x){
+            return stepsNum + Math.abs(point.y - this.y);
+        }else if (point.y == this.y){
+            return stepsNum + + Math.abs(point.x - this.x);
+        }
+        return 0;
+    }
 }

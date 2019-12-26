@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class Day3Puzzle extends Puzzle {
 
-    public final String SECOND_CABLE_FIRST_INSTRUCTION = "L1009";
+    public final String SECOND_CABLE_FIRST_INSTRUCTION = "U98";
 
     List<String> cable1Instructions;
     List<String> cable2Instructions;
@@ -40,9 +40,10 @@ public class Day3Puzzle extends Puzzle {
     public int computeSecondPartResult() {
 
         List<Point> crossPoints = generateCrossPointsFromInput(getFileContentAsString());
+        //crossPoints.stream().forEach(i -> System.out.println(i.toString()));
+        crossPoints.sort(new StepsComparator());
 
-
-        return 0;
+        return crossPoints.get(0).getStepsNum();
     }
 
     private List<Point> generateCrossPointsFromInput(String input){
@@ -67,11 +68,12 @@ public class Day3Puzzle extends Puzzle {
             for(int j = 0; j < cable2Steps.size(); j++){
                 if(cable1Steps.get(i).isCrossed(cable2Steps.get(j))){
 
-                    System.out.println(cable1Steps.get(i).toString() + ", " + cable2Steps.get(j).toString());
+                   // System.out.println(cable1Steps.get(i).toString() + ", " + cable2Steps.get(j).toString());
                     newCrossPoint = cable1Steps.get(i).generateCrossPoint(cable2Steps.get(j));
-                    System.out.println("-> " + newCrossPoint.toString());
+                    //System.out.println("-> " + newCrossPoint.toString());
 
-                    if(newCrossPoint.getX() != 0 && newCrossPoint.getY() != 0) crossPoints.add(newCrossPoint);
+                    if(newCrossPoint.getX() != 0 && newCrossPoint.getY() != 0
+                    && !crossPoints.contains(newCrossPoint)) crossPoints.add(newCrossPoint);
                 }
             }
         }
@@ -95,8 +97,12 @@ public class Day3Puzzle extends Puzzle {
             direction = String.valueOf(inputInstructions.get(i).charAt(0));
             stepValue = Integer.parseInt(inputInstructions.get(i).substring(1));
 
-            nextStep = new Step(new Point(stepsList.get(i - 1).getDestinationPoint().getX(),
-                    stepsList.get(i - 1).getDestinationPoint().getY()), direction, stepValue);
+            nextStep = new Step(
+                        new Point(stepsList.get(i - 1).getDestinationPoint().getX(),
+                                  stepsList.get(i - 1).getDestinationPoint().getY(),
+                                  stepsList.get(i - 1).getDeparturePoint().getStepsNum() + stepValue),
+                                  direction,
+                                  stepValue);
             nextStep.computeDestinationPoint();
             stepsList.add(nextStep);
         }
@@ -117,6 +123,14 @@ public class Day3Puzzle extends Puzzle {
         public int compare(Point a, Point b)
         {
             return a.getManhattanValue() -(b.getManhattanValue());
+        }
+    }
+
+    private class StepsComparator implements Comparator<Point>
+    {
+        public int compare(Point a, Point b)
+        {
+            return a.getStepsNum() -(b.getStepsNum());
         }
     }
 }
