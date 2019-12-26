@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class Day3Puzzle extends Puzzle {
 
-    public final String SECOND_CABLE_FIRST_INSTRUCTION = "U98";
+    public final String SECOND_CABLE_FIRST_INSTRUCTION = "L1009";
 
     List<String> cable1Instructions;
     List<String> cable2Instructions;
@@ -29,45 +29,6 @@ public class Day3Puzzle extends Puzzle {
     @Override
     public int computeResult() {
 
-/*
-        Point p1 = new Point(1, 1);
-        Point p_1 = new Point(5, 1);
-        Point p2 = new Point(3, -1);
-        Point p_2 = new Point(3, 3);
-
-        Step step1 = new Step(p1, p_1, "R", 5);
-        Step step2 = new Step(p2,p_2, "U", 6);
-        System.out.println(step1.isCrossed(step2));
-
-        Step step3 = new Step(p_1, p1, "L", 5);
-        Step step4 = new Step(p2,p_2, "U", 6);
-        System.out.println(step3.isCrossed(step4));
-
-        Step step5 = new Step(p1, p_1, "R", 5);
-        Step step6 = new Step(p_2,p2, "D", 6);
-        System.out.println(step5.isCrossed(step6));
-
-        Step step7 = new Step(p_1, p1, "L", 5);
-        Step step8 = new Step(p_2,p2, "D", 6);
-        System.out.println(step7.isCrossed(step8));
-
-        Step step9 = new Step(p2, p_2, "U", 5);
-        Step step10 = new Step(p1,p_1, "R", 6);
-        System.out.println(step9.isCrossed(step10));
-
-        Step step11 = new Step(p_2, p2, "D", 5);
-        Step step12 = new Step(p1,p_1, "R", 6);
-        System.out.println(step11.isCrossed(step12));
-
-        Step step13 = new Step(p2, p_2, "U", 5);
-        Step step14 = new Step(p_1,p1, "L", 6);
-        System.out.println(step13.isCrossed(step14));
-
-        Step step15 = new Step(p_2,p2, "D", 5);
-        Step step16 = new Step(p_1,p1, "L", 6);
-        System.out.println(step15.isCrossed(step16));
-*/
-/*
         List<String> inputInstructions = Arrays.asList(getFileContentAsString().split(" |,"));
 
         initializeCablesInstructions(inputInstructions.subList(1, inputInstructions.size()));
@@ -75,17 +36,11 @@ public class Day3Puzzle extends Puzzle {
         List<Step> cable1Steps = generateStepsList(cable1Instructions);
         List<Step> cable2Steps = generateStepsList(cable2Instructions);
 
-        //cable1Steps.forEach(i -> System.out.println(i.toString()));
-        //cable2Steps.forEach(i -> System.out.println(i.toString()));
-
         List<Point> crossPoints = generateCrossPoints(cable1Steps, cable2Steps);
         crossPoints.forEach(i -> i.computeManhattanValue());
-        crossPoints.sort(new Sortbyname());
+        crossPoints.sort(new PointsComparator());
 
         return crossPoints.get(0).getManhattanValue();
-        */
-
-    return 0;
     }
 
     private List<Point> generateCrossPoints(List<Step> cable1Steps, List<Step> cable2Steps) {
@@ -101,7 +56,7 @@ public class Day3Puzzle extends Puzzle {
                     newCrossPoint = cable1Steps.get(i).generateCrossPoint(cable2Steps.get(j));
                     System.out.println("-> " + newCrossPoint.toString());
 
-                    crossPoints.add(newCrossPoint);
+                    if(newCrossPoint.getX() != 0 && newCrossPoint.getY() != 0) crossPoints.add(newCrossPoint);
                 }
             }
         }
@@ -142,10 +97,8 @@ public class Day3Puzzle extends Puzzle {
         cable2Instructions = inputInstructions.subList(secondCableFirstInstrIndex, inputInstructions.size());
     }
 
-    private class Sortbyname implements Comparator<Point>
+    private class PointsComparator implements Comparator<Point>
     {
-        // Used for sorting in ascending order of
-        // roll name
         public int compare(Point a, Point b)
         {
             return a.getManhattanValue() -(b.getManhattanValue());

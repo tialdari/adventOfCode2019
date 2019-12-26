@@ -16,7 +16,7 @@ public class Main {
         System.out.println("Result:" + day2Puzzle.computeResult());
 
         Puzzle day3Puzzle = new Day3Puzzle();
-        day3Puzzle.initialize("day_3_test.txt");
+        day3Puzzle.initialize("day_3_input.txt");
         System.out.print(day3Puzzle.computeResult());
     }
 }
