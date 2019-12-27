@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class Day3Puzzle extends Puzzle {
 
-    public final String SECOND_CABLE_FIRST_INSTRUCTION = "U98";
+    public final String SECOND_CABLE_FIRST_INSTRUCTION = "L1009";
 
     List<String> cable1Instructions;
     List<String> cable2Instructions;
@@ -85,7 +85,7 @@ public class Day3Puzzle extends Puzzle {
         List<Step> stepsList = new ArrayList<>();
 
         Step nextStep;
-        Point departurePoint = new Point(0, 0);
+        Point departurePoint = new Point(0, 0, 0);
         String direction = String.valueOf(inputInstructions.get(0).charAt(0));
         int stepValue = Integer.parseInt(inputInstructions.get(0).substring(1));
         nextStep = new Step(departurePoint, direction, stepValue);
@@ -100,7 +100,7 @@ public class Day3Puzzle extends Puzzle {
             nextStep = new Step(
                         new Point(stepsList.get(i - 1).getDestinationPoint().getX(),
                                   stepsList.get(i - 1).getDestinationPoint().getY(),
-                                  stepsList.get(i - 1).getDeparturePoint().getStepsNum() + stepValue),
+                                  stepsList.get(i - 1).getDestinationPoint().getStepsNum()),
                                   direction,
                                   stepValue);
             nextStep.computeDestinationPoint();

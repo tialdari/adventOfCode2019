@@ -79,7 +79,7 @@ public class Point {
         if(point.x == this.x){
             return stepsNum + Math.abs(point.y - this.y);
         }else if (point.y == this.y){
-            return stepsNum + + Math.abs(point.x - this.x);
+            return stepsNum + Math.abs(point.x - this.x);
         }
         return 0;
     }

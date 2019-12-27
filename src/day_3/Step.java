@@ -58,7 +58,7 @@ public class Step {
                 break;
         }
 
-        destinationPoint = new Point(destX, destY);
+        destinationPoint = new Point(destX, destY, departurePoint.getStepsNum() + value);
         destinationPoint.computeManhattanValue();
     }
 
