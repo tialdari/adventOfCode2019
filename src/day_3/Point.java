@@ -60,18 +60,20 @@ public class Point {
         return "x: " + x + ", y: " + y +", manhattanValue: " + manhattanValue;
     }
 
-   private class Sortbyname implements Comparator<Point>
+    public static class PointsComparator implements Comparator<Point>
     {
-        // Used for sorting in ascending order of
-        // roll name
         public int compare(Point a, Point b)
         {
             return a.getManhattanValue() -(b.getManhattanValue());
         }
     }
 
-    public boolean equals(Point obj) {
-        return (this.x == obj.x && this.y == obj.y);
+    public static class StepsComparator implements Comparator<Point>
+    {
+        public int compare(Point a, Point b)
+        {
+            return a.getStepsNum() -(b.getStepsNum());
+        }
     }
 
     public int countSteps(Point point){

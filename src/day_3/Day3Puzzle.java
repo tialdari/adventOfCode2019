@@ -1,7 +1,6 @@
 package day_3;
 
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 import common.Puzzle;
 
@@ -31,7 +30,7 @@ public class Day3Puzzle extends Puzzle {
 
         List<Point> crossPoints = generateCrossPointsFromInput(getFileContentAsString());
         crossPoints.forEach(i -> i.computeManhattanValue());
-        crossPoints.sort(new PointsComparator());
+        crossPoints.sort(new Point.PointsComparator());
 
         return crossPoints.get(0).getManhattanValue();
     }
@@ -40,8 +39,7 @@ public class Day3Puzzle extends Puzzle {
     public int computeSecondPartResult() {
 
         List<Point> crossPoints = generateCrossPointsFromInput(getFileContentAsString());
-        //crossPoints.stream().forEach(i -> System.out.println(i.toString()));
-        crossPoints.sort(new StepsComparator());
+        crossPoints.sort(new Point.StepsComparator());
 
         return crossPoints.get(0).getStepsNum();
     }
@@ -68,9 +66,7 @@ public class Day3Puzzle extends Puzzle {
             for(int j = 0; j < cable2Steps.size(); j++){
                 if(cable1Steps.get(i).isCrossed(cable2Steps.get(j))){
 
-                   // System.out.println(cable1Steps.get(i).toString() + ", " + cable2Steps.get(j).toString());
                     newCrossPoint = cable1Steps.get(i).generateCrossPoint(cable2Steps.get(j));
-                    //System.out.println("-> " + newCrossPoint.toString());
 
                     if(newCrossPoint.getX() != 0 && newCrossPoint.getY() != 0
                     && !crossPoints.contains(newCrossPoint)) crossPoints.add(newCrossPoint);
@@ -116,21 +112,5 @@ public class Day3Puzzle extends Puzzle {
 
         cable1Instructions = inputInstructions.subList(0, secondCableFirstInstrIndex);
         cable2Instructions = inputInstructions.subList(secondCableFirstInstrIndex, inputInstructions.size());
-    }
-
-    private class PointsComparator implements Comparator<Point>
-    {
-        public int compare(Point a, Point b)
-        {
-            return a.getManhattanValue() -(b.getManhattanValue());
-        }
-    }
-
-    private class StepsComparator implements Comparator<Point>
-    {
-        public int compare(Point a, Point b)
-        {
-            return a.getStepsNum() -(b.getStepsNum());
-        }
     }
 }

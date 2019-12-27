@@ -19,31 +19,16 @@ public class Step {
         destinationPoint = new Point();
     }
 
-    public Step(final Point departurePoint, final Point destinationPoint, String direction, int value) {
-        this.departurePoint = departurePoint;
-        this.direction = direction;
-        this.value = value;
-        this.destinationPoint = destinationPoint;
-    }
-
-    public Point getDeparturePoint() {
-        return departurePoint;
-    }
-
     public Point getDestinationPoint() {
         return destinationPoint;
     }
 
-    public void setDestinationPoint(Point destinationPoint) {
-        this.destinationPoint = destinationPoint;
-    }
-
-    public void computeDestinationPoint(){
+    public void computeDestinationPoint() {
 
         int destX = departurePoint.getX();
         int destY = departurePoint.getY();
 
-        switch(direction){
+        switch (direction) {
             case UP_SIGNATURE:
                 destY += value;
                 break;
@@ -62,7 +47,7 @@ public class Step {
         destinationPoint.computeManhattanValue();
     }
 
-    public boolean isCrossed(Step otherStep){
+    public boolean isCrossed(Step otherStep) {
 
         if (this.direction != otherStep.direction) {
 
@@ -88,14 +73,14 @@ public class Step {
         return false;
     }
 
-    public Point generateCrossPoint(Step otherStep){
+    public Point generateCrossPoint(Step otherStep) {
 
         int thisStepStepsNum;
         int otherStepStepsNum;
         Point newCrossPoint;
 
         if (isCrossed(otherStep)) {
-            if (this.direction.equals("U") || this.direction.equals("D")){
+            if (this.direction.equals("U") || this.direction.equals("D")) {
 
                 newCrossPoint = new Point(this.departurePoint.getX(), otherStep.destinationPoint.getY());
                 thisStepStepsNum = this.departurePoint.countSteps(newCrossPoint);
@@ -115,8 +100,8 @@ public class Step {
         return null;
     }
 
-    public String toString(){
+    public String toString() {
         return "departure point: " + departurePoint.toString() + ", destination point: " + destinationPoint.toString()
-        + ", direction: " + direction + ", value: " + value;
+                + ", direction: " + direction + ", value: " + value;
     }
 }
