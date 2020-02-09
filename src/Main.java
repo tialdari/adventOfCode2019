@@ -22,6 +22,10 @@ public class Main {
 
         Puzzle day4Puzzle = new Day4Puzzle();
         day4Puzzle.initialize("day_4_input.txt");
-        System.out.print("Result: " + day4Puzzle.computeResult());
+//        System.out.print("Result: " + day4Puzzle.computeResult());
+        System.out.print("Result: " + day4Puzzle.computeSecondPartResult());
+        //System.out.print("\nIs correct: " + ((Day4Puzzle) day4Puzzle).hasEqualSeperateAdjacentDigit(111122));
+
+
     }
 }
