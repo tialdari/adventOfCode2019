@@ -13,24 +13,29 @@ public class Day4Puzzle extends Puzzle {
     private String stringRange;
     private int[] arrRange;
 
-    public Day4Puzzle(String stringRange) {
-        this.stringRange = stringRange;
+    public Day4Puzzle() {
         arrRange = new int[RANGE_ARR_LENGTH];
     }
 
     @Override
     public int computeResult() {
 
+        stringRange = getFileContentAsString();
         parseRange();
         List<Integer> range = IntStream.range(arrRange[0], arrRange[1])
                                         .boxed()
                                         .collect(Collectors.toList());
 
-        List<Integer> filteredRange1 = filterNumbers(range, hasRightDigitNumberPredicate());
+        return filterWithPredicates(range).size();
+    }
+
+    private List<Integer> filterWithPredicates(List<Integer> listNumbers){
+
+        List<Integer> filteredRange1 = filterNumbers(listNumbers, hasRightDigitNumberPredicate());
         List<Integer> filteredRange2 = filterNumbers(filteredRange1, hasEqualAdjacentDigitPredicate());
         List<Integer> filteredRange3 = filterNumbers(filteredRange2, hasNotDeacreasingDigitsPredicate());
 
-        return filteredRange3.size();
+        return filteredRange3;
     }
 
     public static List<Integer> filterNumbers (List<Integer> numbers,
@@ -46,15 +51,25 @@ public class Day4Puzzle extends Puzzle {
         return 0;
     }
 
-    private boolean hasRightDigitNumber(int number){
-        return false;
+    public boolean hasRightDigitNumber(int number){
+
+        int digitsNumber = String.valueOf(number).toCharArray().length;
+        return digitsNumber >= 1 && digitsNumber <= DIGITS_NUMBER;
     }
 
     private Predicate<Integer> hasRightDigitNumberPredicate(){
         return n -> hasRightDigitNumber(n);
     }
 
-    private boolean hasEqualAdjacentDigit(int number){
+    public boolean hasEqualAdjacentDigit(int number){
+
+        char[] charArrNumber = String.valueOf(number).toCharArray();
+
+        for(int i = 0; i < charArrNumber.length - 1; i++){
+            if(charArrNumber[i] == charArrNumber[i + 1]) {
+                return true;
+            }
+        }
         return false;
     }
 
@@ -62,8 +77,16 @@ public class Day4Puzzle extends Puzzle {
         return n -> hasEqualAdjacentDigit(n);
     }
 
-    private boolean hasNotDeacreasingDigits(int number){
-        return false;
+    public boolean hasNotDeacreasingDigits(int number){
+
+        char[] charArrNumber = String.valueOf(number).toCharArray();
+
+        for(int i = 0; i < charArrNumber.length - 1; i++){
+            if(charArrNumber[i] > charArrNumber[i + 1]) {
+                return false;
+            }
+        }
+        return true;
     }
 
     private Predicate<Integer> hasNotDeacreasingDigitsPredicate(){
@@ -74,7 +97,6 @@ public class Day4Puzzle extends Puzzle {
 
         String[] range = stringRange.split("-");
         arrRange[0] = Integer.parseInt(range[0]);
-        arrRange[2] = Integer.parseInt(range[2]);
+        arrRange[1] = Integer.parseInt(range[1]);
     }
-
 }

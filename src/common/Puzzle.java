@@ -63,7 +63,8 @@ public abstract class Puzzle {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            result += " " + line;
+            if(result.equals("")) result += line;
+            else result += " " + line;
         }
 
         try {
