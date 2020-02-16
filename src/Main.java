@@ -12,20 +12,16 @@ public class Main {
 //        day1puzzle.initialize("day_1_input.txt");
 //        System.out.println("Result:" + day1puzzle.computeResult());
 //
-//        Puzzle day2Puzzle = new Day2Puzzle();
-//        day2Puzzle.initialize("day_2_input.txt");
-//        System.out.println("Result:" + day2Puzzle.computeResult());
+        Puzzle day2Puzzle = new Day2Puzzle();
+        day2Puzzle.initialize("day_2_input.txt");
+        System.out.println("Result:" + day2Puzzle.computeResult());
 //
 //        Puzzle day3Puzzle = new Day3Puzzle();
 //        day3Puzzle.initialize("day_3_input.txt");
 //        System.out.print("Result: " + day3Puzzle.computeSecondPartResult());
 
-        Puzzle day4Puzzle = new Day4Puzzle();
-        day4Puzzle.initialize("day_4_input.txt");
-//        System.out.print("Result: " + day4Puzzle.computeResult());
-        System.out.print("Result: " + day4Puzzle.computeSecondPartResult());
-        //System.out.print("\nIs correct: " + ((Day4Puzzle) day4Puzzle).hasEqualSeperateAdjacentDigit(111122));
-
-
+//        Puzzle day4Puzzle = new Day4Puzzle();
+//        day4Puzzle.initialize("day_4_input.txt");
+//        System.out.print("Result: " + day4Puzzle.computeSecondPartResult());
     }
 }

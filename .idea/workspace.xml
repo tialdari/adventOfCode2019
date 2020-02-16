@@ -4,7 +4,7 @@
     <list default="true" id="4ecb9320-81e3-4255-8746-b3a54b14e2e5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day_4/Day4Puzzle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day_4/Day4Puzzle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/day_2/Day2Puzzle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day_2/Day2Puzzle.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,55 +21,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/day_3/Day3Puzzle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="46" column="66" selection-start-line="46" selection-start-column="66" selection-end-line="46" selection-end-column="66" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#computeSecondPartResult#0;class#Day3Puzzle#0" />
-                <element signature="method#generateCrossPointsFromInput#0;class#Day3Puzzle#0" />
-                <element signature="method#generateCrossPoints#0;class#Day3Puzzle#0" />
-                <element signature="method#generateStepsList#0;class#Day3Puzzle#0" />
-                <element signature="e#2964#3606#1" />
-                <element signature="method#initializeCablesInstructions#0;class#Day3Puzzle#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/common/Puzzle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="65" column="15" selection-start-line="65" selection-start-column="15" selection-end-line="65" selection-end-column="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/day_4/Day4Puzzle.java">
+        <entry file="file://$PROJECT_DIR$/src/day_2/Day2Puzzle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="99" column="19" lean-forward="true" selection-start-line="99" selection-start-column="19" selection-end-line="99" selection-end-column="19" />
+            <state relative-caret-position="580">
+              <caret line="100" column="26" selection-start-line="100" selection-start-column="26" selection-end-line="100" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#382#383#0" expanded="true" />
-                <element signature="e#434#435#0" expanded="true" />
-                <element signature="method#getRangeList#0;class#Day4Puzzle#0" />
-                <element signature="method#filterWithPredicates#0;class#Day4Puzzle#0" />
-                <element signature="method#filterWithPredicates#1;class#Day4Puzzle#0" />
-                <element signature="method#filterEmployees#0;class#Day4Puzzle#0" />
-                <element signature="method#hasRightDigitNumber#0;class#Day4Puzzle#0" />
-                <element signature="method#hasEqualAdjacentDigit#0;class#Day4Puzzle#0" />
-                <element signature="method#hasEqualSeparateAdjacentDigitPredicate#0;class#Day4Puzzle#0" />
-                <element signature="method#hasNotDeacreasingDigits#0;class#Day4Puzzle#0" />
-                <element signature="method#parseRange#0;class#Day4Puzzle#0" />
+                <element signature="method#replaceNumbers#0;class#Day2Puzzle#0" />
+                <element signature="method#computeInputPair#0;class#Day2Puzzle#0" />
+                <element signature="method#manageOpcodeAddNum#0;class#Day2Puzzle#0" />
+                <element signature="method#manageOpcodeMultNum#0;class#Day2Puzzle#0" />
+                <element signature="method#manageOpcodeInputNum#0;class#Day2Puzzle#0" />
+                <element signature="method#manageOpcodeOutputNum#0;class#Day2Puzzle#0" />
+                <element signature="method#decodeInstruction#0;class#Day2Puzzle#0" />
+                <element signature="method#decodeOpCode#0;class#Day2Puzzle#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/inputs/day_2_input.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="24" selection-start-column="24" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -77,20 +53,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="75" selection-start-line="25" selection-start-column="75" selection-end-line="25" selection-end-column="75" />
+            <state relative-caret-position="240">
+              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/inputs/day_4_input.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -111,6 +78,12 @@
       <find>r99</find>
       <find>442</find>
       <find>system</find>
+      <find>99</find>
+      <find>99,</find>
+      <find>,99,</find>
+      <find>3</find>
+      <find>sys</find>
+      <find>curren</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -123,7 +96,6 @@
         <option value="$PROJECT_DIR$/src/resources/values/Values.java" />
         <option value="$PROJECT_DIR$/src/services/IO.java" />
         <option value="$PROJECT_DIR$/src/day_1/Day1Puzzle.java" />
-        <option value="$PROJECT_DIR$/src/day_2/Day2Puzzle.java" />
         <option value="$PROJECT_DIR$/src/resources/inputs/day_3_test1_part2.txt" />
         <option value="$PROJECT_DIR$/src/resources/inputs/day_3_test.txt" />
         <option value="$PROJECT_DIR$/src/resources/inputs/day_3_test_input2.txt" />
@@ -132,8 +104,9 @@
         <option value="$PROJECT_DIR$/src/day_3/Step.java" />
         <option value="$PROJECT_DIR$/src/resources/inputs/day_4_input.txt" />
         <option value="$PROJECT_DIR$/src/common/Puzzle.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/day_4/Day4Puzzle.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/day_2/Day2Puzzle.java" />
       </list>
     </option>
   </component>
@@ -150,6 +123,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -208,14 +183,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581265593772" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581879331182" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -285,12 +258,15 @@
       <workItem from="1577394158890" duration="7104000" />
       <workItem from="1577445008996" duration="160000" />
       <workItem from="1577650785660" duration="710000" />
-      <workItem from="1581254111734" duration="6496000" />
+      <workItem from="1581254111734" duration="7093000" />
+      <workItem from="1581442642786" duration="1852000" />
+      <workItem from="1581525385230" duration="978000" />
+      <workItem from="1581873049048" duration="5896000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68393000" />
+    <option name="totallyTimeSpent" value="77716000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -305,7 +281,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" side_tool="true" visible="true" weight="0.2267525" />
+      <window_info content_ui="combo" id="Project" order="0" side_tool="true" visible="true" weight="0.2353362" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" weight="0.3297568" />
@@ -316,11 +292,11 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3283767" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7503576" visible="true" weight="0.31084338" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4985694" weight="0.41084337" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4985694" weight="0.28915662" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49713877" weight="0.36385542" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49713877" weight="0.071084335" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50143063" side_tool="true" weight="0.4" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3299363" />
@@ -383,6 +359,12 @@
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/day_2/Day2Puzzle.java</url>
+          <line>66</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -406,9 +388,6 @@
           <caret line="5" column="5" selection-start-line="5" selection-end-line="5" selection-end-column="5" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/inputs/day_2_input.txt">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -443,19 +422,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/day_2/Day2Puzzle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="17" />
-          <folding>
-            <element signature="e#453#454#0" expanded="true" />
-            <element signature="e#476#477#0" expanded="true" />
-            <element signature="e#817#818#0" expanded="true" />
-            <element signature="e#841#842#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/inputs/day_3_test_input.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -463,13 +429,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/day_4.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-start-column="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/day_4.java" />
     <entry file="file://$PROJECT_DIR$/src/services/IO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -514,26 +474,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/Puzzle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="65" column="15" selection-start-line="65" selection-start-column="15" selection-end-line="65" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/inputs/day_4_input.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/day_3/Day3Puzzle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
+        <state relative-caret-position="600">
           <caret line="46" column="66" selection-start-line="46" selection-start-column="66" selection-end-line="46" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -547,10 +490,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/common/Puzzle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="75" selection-start-line="25" selection-start-column="75" selection-end-line="25" selection-end-column="75" />
+        <state relative-caret-position="840">
+          <caret line="65" column="15" selection-start-line="65" selection-start-column="15" selection-end-line="65" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -559,21 +502,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/day_4/Day4Puzzle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="99" column="19" lean-forward="true" selection-start-line="99" selection-start-column="19" selection-end-line="99" selection-end-column="19" />
+        <state relative-caret-position="1185">
+          <caret line="133" selection-start-line="133" selection-end-line="133" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#382#383#0" expanded="true" />
             <element signature="e#434#435#0" expanded="true" />
-            <element signature="method#getRangeList#0;class#Day4Puzzle#0" />
             <element signature="method#filterWithPredicates#0;class#Day4Puzzle#0" />
-            <element signature="method#filterWithPredicates#1;class#Day4Puzzle#0" />
-            <element signature="method#filterEmployees#0;class#Day4Puzzle#0" />
             <element signature="method#hasRightDigitNumber#0;class#Day4Puzzle#0" />
             <element signature="method#hasEqualAdjacentDigit#0;class#Day4Puzzle#0" />
+            <element signature="method#hasEqualSeperateAdjacentDigit#0;class#Day4Puzzle#0" />
             <element signature="method#hasEqualSeparateAdjacentDigitPredicate#0;class#Day4Puzzle#0" />
             <element signature="method#hasNotDeacreasingDigits#0;class#Day4Puzzle#0" />
             <element signature="method#parseRange#0;class#Day4Puzzle#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/inputs/day_5_input.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/inputs/day_4_input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/inputs/day_2_input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="24" selection-start-column="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/day_2/Day2Puzzle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="100" column="26" selection-start-line="100" selection-start-column="26" selection-end-line="100" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#replaceNumbers#0;class#Day2Puzzle#0" />
+            <element signature="method#computeInputPair#0;class#Day2Puzzle#0" />
+            <element signature="method#manageOpcodeAddNum#0;class#Day2Puzzle#0" />
+            <element signature="method#manageOpcodeMultNum#0;class#Day2Puzzle#0" />
+            <element signature="method#manageOpcodeInputNum#0;class#Day2Puzzle#0" />
+            <element signature="method#manageOpcodeOutputNum#0;class#Day2Puzzle#0" />
+            <element signature="method#decodeInstruction#0;class#Day2Puzzle#0" />
+            <element signature="method#decodeOpCode#0;class#Day2Puzzle#0" />
           </folding>
         </state>
       </provider>

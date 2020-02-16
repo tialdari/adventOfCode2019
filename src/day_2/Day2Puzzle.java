@@ -1,33 +1,40 @@
 package day_2;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import common.Puzzle;
 
 public class Day2Puzzle extends Puzzle {
 
     public static final int OPCODE_ADD_NUM = 1;
     public static final int OPCODE_MULT_NUM = 2;
+    public static final int OPCODE_INPUT_NUM = 3;
+    public static final int OPCODE_OUTPUT_NUM = 4;
     public static final int OPCODE_TERMINATE_NUM = 99;
 
-    public static final int POS_1_REPLACE_NUM = 12;
-    public static final int POS_2_REPLACE_NUM = 2;
+    public static final int POS_1_REPLACE = 1;
+    public static final int POS_2_REPLACE = 2;
 
     public static final int NOUN_RANGE = 99;
     public static final int VERB_RANGE = 99;
 
+    private int currentPos;
+
     public Day2Puzzle() {
         super();
+        currentPos = 0;
     }
 
     @Override
     public int computeResult() {
 
         int[] intcode = convertToIntArray(getFileContentAsString().split(","));
+        intcode = replaceNumbers(intcode, 12, 2);
+//        int[] resultPair = computeInputPair(intcode, 19690720);
+//        int result = 100 * resultPair[0] + resultPair[1];
 
-        int[] resultPair = computeInputPair(intcode, 19690720);
-        int result = 100 * resultPair[0] + resultPair[1];
-
-        return result;
-
+        return getProgramResult(intcode);
     }
 
     @Override
@@ -37,8 +44,8 @@ public class Day2Puzzle extends Puzzle {
 
     private int[] replaceNumbers(int[] intcode, int pos1ReplaceNum, int pos2ReplaceNum){
 
-        intcode[1] = pos1ReplaceNum;
-        intcode[2] = pos2ReplaceNum;
+        intcode[POS_1_REPLACE] = pos1ReplaceNum;
+        intcode[POS_2_REPLACE] = pos2ReplaceNum;
         return intcode;
     }
 
@@ -57,35 +64,108 @@ public class Day2Puzzle extends Puzzle {
 
     private int getProgramResult(int[] intcode){
 
-        int resultPos;
-        int firstNumPos;
-        int secondNumPos;
+        int[] intCodeCopy = intcode;
+        List<Integer> instruction = new ArrayList<>();
 
-        for (int i = 0; i < intcode.length; i++) {
+        while(currentPos < intCodeCopy.length){
 
-            resultPos = intcode[i + 3];
-            firstNumPos = intcode[i + 1];
-            secondNumPos = intcode[i + 2];
+            switch (intCodeCopy[currentPos]) {
 
-            switch (intcode[i]) {
+//                case OPCODE_ADD_NUM:
+//                    intcode[resultPos] = intcode[firstNumPos] + intcode[secondNumPos];
+//                    if(i + 4 < intcode.length) i += 3;
+//
+//                    break;
+//
+//                case OPCODE_MULT_NUM:
+//                    intcode[resultPos] = intcode[firstNumPos] * intcode[secondNumPos];
+//                    if(i + 4 <= intcode.length) i += 3;
+//
+//                    break;
 
-                case OPCODE_ADD_NUM:
-
-                    intcode[resultPos] = intcode[firstNumPos] + intcode[secondNumPos];
-                    if(i + 4 < intcode.length) i += 3;
-
+                case OPCODE_INPUT_NUM:
                     break;
 
-                case OPCODE_MULT_NUM:
-                    intcode[resultPos] = intcode[firstNumPos] * intcode[secondNumPos];
-                    if(i + 4 <= intcode.length) i += 3;
-
+                case OPCODE_OUTPUT_NUM:
                     break;
 
                 case OPCODE_TERMINATE_NUM:
-                    return intcode[0];
+                    return intCodeCopy[0];
+
+                default:
+                    instruction.clear();
+                    Collections.addAll(instruction, intCodeCopy[currentPos], intCodeCopy[currentPos+1], intCodeCopy[currentPos+2], intCodeCopy[currentPos+3]);
+                    intCodeCopy = decodeInstruction(intCodeCopy, instruction);
             }
         }
-        return intcode[0];
+        return intCodeCopy[0];
+    }
+
+    private int[] manageOpcodeAddNum(int[] intcode, List<Integer> instruction){
+
+        int resultPos = computeResultPos(instruction);
+        int firstNumPos = computeFirstNumPos(instruction);
+        int secondNumPos = computeSecondNumPos(instruction);
+
+        intcode[resultPos] = intcode[firstNumPos] + intcode[secondNumPos];
+        if(currentPos + 4 < intcode.length) currentPos += 4;
+
+        return intcode;
+    }
+
+    private int[] manageOpcodeMultNum(int[] intcode, List<Integer> instruction){
+
+        int resultPos = computeResultPos(instruction);
+        int firstNumPos = computeFirstNumPos(instruction);
+        int secondNumPos = computeSecondNumPos(instruction);
+
+        intcode[resultPos] = intcode[firstNumPos] * intcode[secondNumPos];
+        if(currentPos + 4 <= intcode.length) currentPos += 4;
+
+        return intcode;
+    }
+
+    private int computeResultPos(List<Integer> instruction){
+        return instruction.get(3);
+    }
+
+    private int computeFirstNumPos(List<Integer> instruction){
+        return instruction.get(1);
+    }
+
+    private int computeSecondNumPos(List<Integer> instruction){
+        return instruction.get(2);
+    }
+
+    private void manageOpcodeInputNum(List<Integer> instruction){
+
+    }
+
+    private void manageOpcodeOutputNum(List<Integer> instruction){
+
+    }
+
+    private int[] decodeInstruction(int[] intcode, List<Integer> instruction){
+
+        //switch (decodeOpCode(instruction.get(0))) {
+        switch (instruction.get(0)) {
+
+            case OPCODE_ADD_NUM:
+                return manageOpcodeAddNum(intcode, instruction);
+
+            case OPCODE_MULT_NUM:
+                return manageOpcodeMultNum(intcode, instruction);
+
+            default:
+                System.out.println("Error, opcode: " + instruction.get(0) + " doesn't exist");
+        }
+
+        return intcode;
+    }
+
+    private int decodeOpCode(int opCodeInstruction){
+
+        char[] charArr = String.valueOf(opCodeInstruction).toCharArray();
+        return charArr[charArr.length - 1];
     }
 }
