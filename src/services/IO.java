@@ -2,12 +2,15 @@ package services;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class IO {
 
     private File file;
+    private Scanner scanner;
 
     public IO() {
+        scanner = new Scanner(System.in);
     }
 
     public void setFile(File file) {
@@ -36,5 +39,13 @@ public class IO {
         }
 
         return new BufferedReader(csvReader);
+    }
+
+    public int getInt(){
+
+        int input = -1;
+
+       if(scanner.hasNextInt()) return scanner.nextInt();
+       else return input;
     }
 }

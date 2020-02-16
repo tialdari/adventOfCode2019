@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/day_2/Day2Puzzle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day_2/Day2Puzzle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/IO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/IO.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,21 +22,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/day_2/Day2Puzzle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="100" column="26" selection-start-line="100" selection-start-column="26" selection-end-line="100" selection-end-column="26" />
+            <state relative-caret-position="483">
+              <caret line="162" column="10" selection-start-line="162" selection-start-column="10" selection-end-line="162" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#replaceNumbers#0;class#Day2Puzzle#0" />
                 <element signature="method#computeInputPair#0;class#Day2Puzzle#0" />
                 <element signature="method#manageOpcodeAddNum#0;class#Day2Puzzle#0" />
                 <element signature="method#manageOpcodeMultNum#0;class#Day2Puzzle#0" />
                 <element signature="method#manageOpcodeInputNum#0;class#Day2Puzzle#0" />
                 <element signature="method#manageOpcodeOutputNum#0;class#Day2Puzzle#0" />
-                <element signature="method#decodeInstruction#0;class#Day2Puzzle#0" />
-                <element signature="method#decodeOpCode#0;class#Day2Puzzle#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/services/IO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="543">
+              <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#184#185#0" expanded="true" />
+                <element signature="e#222#223#0" expanded="true" />
+                <element signature="e#169#170#0" expanded="true" />
+                <element signature="e#201#202#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -50,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+            <state relative-caret-position="270">
+              <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,7 +108,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/Puzzle.java" />
         <option value="$PROJECT_DIR$/src/resources/values/Values.java" />
-        <option value="$PROJECT_DIR$/src/services/IO.java" />
         <option value="$PROJECT_DIR$/src/day_1/Day1Puzzle.java" />
         <option value="$PROJECT_DIR$/src/resources/inputs/day_3_test1_part2.txt" />
         <option value="$PROJECT_DIR$/src/resources/inputs/day_3_test.txt" />
@@ -105,8 +118,9 @@
         <option value="$PROJECT_DIR$/src/resources/inputs/day_4_input.txt" />
         <option value="$PROJECT_DIR$/src/common/Puzzle.java" />
         <option value="$PROJECT_DIR$/src/day_4/Day4Puzzle.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/services/IO.java" />
         <option value="$PROJECT_DIR$/src/day_2/Day2Puzzle.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -123,8 +137,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -183,12 +195,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581879331182" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581880654008" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -261,12 +275,13 @@
       <workItem from="1581254111734" duration="7093000" />
       <workItem from="1581442642786" duration="1852000" />
       <workItem from="1581525385230" duration="978000" />
-      <workItem from="1581873049048" duration="5896000" />
+      <workItem from="1581873049048" duration="6407000" />
+      <workItem from="1581882532461" duration="719000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77716000" />
+    <option name="totallyTimeSpent" value="78946000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -281,7 +296,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" side_tool="true" visible="true" weight="0.2353362" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" side_tool="true" visible="true" weight="0.23819743" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" weight="0.3297568" />
@@ -291,12 +306,12 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3283767" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7503576" visible="true" weight="0.31084338" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7503576" weight="0.31084338" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4985694" weight="0.28915662" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49713877" weight="0.071084335" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49713877" visible="true" weight="0.14457831" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50143063" side_tool="true" weight="0.4" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3299363" />
@@ -365,6 +380,18 @@
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/day_2/Day2Puzzle.java</url>
+          <line>53</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/day_2/Day2Puzzle.java</url>
+          <line>98</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -430,16 +457,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/day_4.java" />
-    <entry file="file://$PROJECT_DIR$/src/services/IO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/day_3/Step.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="753">
@@ -529,16 +546,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/inputs/day_2_input.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -546,20 +553,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/day_2/Day2Puzzle.java">
+    <entry file="file://$PROJECT_DIR$/src/services/IO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="100" column="26" selection-start-line="100" selection-start-column="26" selection-end-line="100" selection-end-column="26" />
+        <state relative-caret-position="543">
+          <caret line="48" column="25" selection-start-line="48" selection-start-column="25" selection-end-line="48" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#replaceNumbers#0;class#Day2Puzzle#0" />
+            <element signature="e#184#185#0" expanded="true" />
+            <element signature="e#222#223#0" expanded="true" />
+            <element signature="e#169#170#0" expanded="true" />
+            <element signature="e#201#202#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/day_2/Day2Puzzle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="162" column="10" selection-start-line="162" selection-start-column="10" selection-end-line="162" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#computeInputPair#0;class#Day2Puzzle#0" />
             <element signature="method#manageOpcodeAddNum#0;class#Day2Puzzle#0" />
             <element signature="method#manageOpcodeMultNum#0;class#Day2Puzzle#0" />
             <element signature="method#manageOpcodeInputNum#0;class#Day2Puzzle#0" />
             <element signature="method#manageOpcodeOutputNum#0;class#Day2Puzzle#0" />
-            <element signature="method#decodeInstruction#0;class#Day2Puzzle#0" />
-            <element signature="method#decodeOpCode#0;class#Day2Puzzle#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

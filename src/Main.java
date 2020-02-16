@@ -13,8 +13,10 @@ public class Main {
 //        System.out.println("Result:" + day1puzzle.computeResult());
 //
         Puzzle day2Puzzle = new Day2Puzzle();
-        day2Puzzle.initialize("day_2_input.txt");
-        System.out.println("Result:" + day2Puzzle.computeResult());
+//        day2Puzzle.initialize("day_2_input.txt");
+//        System.out.println("Result:" + day2Puzzle.computeResult());
+
+        //System.out.println(((Day2Puzzle) day2Puzzle).decodeOpCode(1002));
 //
 //        Puzzle day3Puzzle = new Day3Puzzle();
 //        day3Puzzle.initialize("day_3_input.txt");

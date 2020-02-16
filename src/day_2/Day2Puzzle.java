@@ -69,31 +69,24 @@ public class Day2Puzzle extends Puzzle {
 
         while(currentPos < intCodeCopy.length){
 
+            instruction.clear();
+
             switch (intCodeCopy[currentPos]) {
 
-//                case OPCODE_ADD_NUM:
-//                    intcode[resultPos] = intcode[firstNumPos] + intcode[secondNumPos];
-//                    if(i + 4 < intcode.length) i += 3;
-//
-//                    break;
-//
-//                case OPCODE_MULT_NUM:
-//                    intcode[resultPos] = intcode[firstNumPos] * intcode[secondNumPos];
-//                    if(i + 4 <= intcode.length) i += 3;
-//
-//                    break;
-
                 case OPCODE_INPUT_NUM:
+                    Collections.addAll(instruction, intCodeCopy[currentPos], intCodeCopy[currentPos+1]);
+                    intCodeCopy = manageOpcodeInputNum(intCodeCopy, instruction);
                     break;
 
                 case OPCODE_OUTPUT_NUM:
+                    Collections.addAll(instruction, intCodeCopy[currentPos], intCodeCopy[currentPos+1]);
+                    manageOpcodeOutputNum(intCodeCopy, instruction);
                     break;
 
                 case OPCODE_TERMINATE_NUM:
                     return intCodeCopy[0];
 
                 default:
-                    instruction.clear();
                     Collections.addAll(instruction, intCodeCopy[currentPos], intCodeCopy[currentPos+1], intCodeCopy[currentPos+2], intCodeCopy[currentPos+3]);
                     intCodeCopy = decodeInstruction(intCodeCopy, instruction);
             }
@@ -125,6 +118,18 @@ public class Day2Puzzle extends Puzzle {
         return intcode;
     }
 
+    private int[] manageOpcodeInputNum(int[] intcode, List<Integer> instruction){
+
+        int inputSavePos = instruction.get(1);
+        intcode[inputSavePos] = io.getInt();
+        return intcode;
+    }
+
+    private void manageOpcodeOutputNum(int[] intcode, List<Integer> instruction){
+
+        System.out.println(intcode[instruction.get(1)] + " ");
+    }
+
     private int computeResultPos(List<Integer> instruction){
         return instruction.get(3);
     }
@@ -137,18 +142,9 @@ public class Day2Puzzle extends Puzzle {
         return instruction.get(2);
     }
 
-    private void manageOpcodeInputNum(List<Integer> instruction){
-
-    }
-
-    private void manageOpcodeOutputNum(List<Integer> instruction){
-
-    }
-
     private int[] decodeInstruction(int[] intcode, List<Integer> instruction){
 
-        //switch (decodeOpCode(instruction.get(0))) {
-        switch (instruction.get(0)) {
+        switch (decodeOpCode(instruction.get(0))) {
 
             case OPCODE_ADD_NUM:
                 return manageOpcodeAddNum(intcode, instruction);
@@ -163,9 +159,9 @@ public class Day2Puzzle extends Puzzle {
         return intcode;
     }
 
-    private int decodeOpCode(int opCodeInstruction){
+    public int decodeOpCode(int opCodeInstruction){
 
         char[] charArr = String.valueOf(opCodeInstruction).toCharArray();
-        return charArr[charArr.length - 1];
+        return Integer.valueOf(String.valueOf(charArr[charArr.length - 1]));
     }
 }
